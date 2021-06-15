@@ -1,0 +1,22 @@
+@font-face {
+	src: url(../assets/F37JudgeTest-RegularCondensed.otf);
+	font-family: patMahomesRegular;
+}
+.product {
+	width: 100%;
+}
+
+.product__image {
+	object-fit: contain;
+	width: 100%;
+	background-color: white;
+}
+.product__info > p {
+	color: white;
+	font-family: patMahomesRegular;
+}
+
+.product__info > p > span {
+	color: yellow;
+	font-family: patMahomesRegular;
+}

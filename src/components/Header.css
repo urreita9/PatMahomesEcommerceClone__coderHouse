@@ -1,0 +1,89 @@
+.navBar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-weight: 500;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	width: 100%;
+	max-height: 100px;
+	background-color: transparent;
+	color: white;
+	mix-blend-mode: difference;
+	font-family: sans-serif;
+}
+
+/* navBar left */
+.navBar__left__menuItems {
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+.navBar__left__menuItems__items {
+	padding: 10px;
+}
+.navBar__left__menuItems__items:hover {
+	color: yellow;
+	cursor: pointer;
+}
+
+.mobileMenu {
+	display: none;
+}
+/* navBar right */
+.navBar__right__cart {
+	display: flex;
+	align-items: center;
+}
+
+.navBar__right__cart__itemsCount {
+	width: 20px;
+	margin-left: 10px;
+	margin-right: 20px;
+	padding: 3px;
+	border: 1px solid white;
+}
+
+@media (max-width: 800px) {
+	.navBar {
+		margin-top: 5%;
+	}
+}
+.navMobile {
+	height: 100vh;
+	width: 100vw;
+	background-color: black;
+
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	position: fixed;
+	font-size: 25vw;
+	color: white;
+	line-height: 0.8;
+}
+.navMobile__list {
+	margin-top: 40vw;
+	list-style: none;
+	text-align: left;
+}
+
+.navMobile__list__item {
+	font-family: patMahomesBold;
+}
+.navMobile__list__item:hover {
+	color: yellow;
+}
+
+/* .menuIcon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	color: white;
+} */

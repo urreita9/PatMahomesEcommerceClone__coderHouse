@@ -1,0 +1,183 @@
+@font-face {
+	src: url(../assets/F37JudgeTest-BoldCondensed.otf);
+	font-family: patMahomesBold;
+}
+@font-face {
+	src: url(../assets/F37JudgeTest-MediumCondensed.otf);
+	font-family: patMahomesMedium;
+}
+@font-face {
+	src: url(../assets/F37JudgeTest-RegularCondensed.otf);
+	font-family: patMahomesRegular;
+}
+
+/* TOP BODY */
+.layout {
+	background-color: black;
+}
+.body {
+	width: 100vw;
+	background-color: black;
+	margin: 0;
+	overflow: hidden;
+}
+.body__topContainer {
+	display: flex;
+	flex-direction: column;
+}
+.body__topCointainer__backgroundImage {
+	width: 100vw;
+	height: 51vw;
+	object-fit: cover;
+	margin-top: -41px;
+}
+.body__topContainer__title {
+	font-family: patMahomesBold;
+	font-weight: lighter;
+	/* margin-top: -53vh; */
+	position: absolute;
+	top: 29vw;
+	text-align: center;
+	color: white;
+	font-size: 16.2vw;
+	width: 100%;
+	/* letter-spacing: -0.1em; */
+}
+
+.body__topContainer__title > span {
+	color: transparent;
+	-webkit-text-stroke: 1px #fff;
+	font-family: patMahomesBold;
+}
+/* Marquee */
+.body__topContainer__marquee {
+	width: 100vw;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+}
+.body__topContainer__marquee__text {
+	font-size: 40px;
+	font-family: patMahomesRegular;
+
+	color: white;
+	font-weight: 100;
+	text-transform: uppercase;
+	animation: marquee 100s linear infinite;
+}
+.body__topContainer__marquee__text::before {
+	content: attr(data-text);
+}
+.body__topContainer__marquee__text::after {
+	content: attr(data-text);
+}
+@keyframes marquee {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+/* PRODUCT GRID */
+
+.body__productGrid {
+	width: 90vw;
+	margin: 0 auto;
+	display: grid;
+	grid-column-gap: 2.431vw;
+	grid-row-gap: 1vw;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+}
+
+.body__productGrid__first {
+	grid-row-start: 1;
+	grid-column-start: 1;
+	grid-row-end: 3;
+	grid-column-end: 3;
+}
+
+.body__productGrid__last {
+	grid-row-start: 2;
+	grid-column-start: 3;
+	grid-row-end: 4;
+	grid-column-end: 5;
+}
+
+/* SHOP ALL TITLE */
+.body__shopAllTitle {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-family: patMahomesBold;
+	color: white;
+	font-size: 15.2vw;
+}
+.body__shopAllTitle:hover {
+	color: yellow;
+	cursor: pointer;
+}
+
+/* 2ND BackGround Image */
+.body__topCointainer__backgroundImage2 {
+	width: 90vw;
+	margin: 0 auto;
+}
+
+/* 2ND Marquee */
+
+.body__secondMarquee {
+	width: 100vw;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+}
+
+/* Mahomies Title */
+.body__mahomies {
+	margin-top: 1vw;
+}
+.body__mahomies__title {
+	font-family: patMahomesBold;
+	font-weight: lighter;
+	/* margin-top: -53vh; */
+	color: white;
+	font-size: 14.2vw;
+	width: 90vw;
+	text-align: left;
+	margin: 0 auto;
+	line-height: 85%;
+}
+
+.body__mahomies__title:hover {
+	color: yellow;
+	cursor: pointer;
+}
+.body__mahomies__title > span {
+	color: transparent;
+	-webkit-text-stroke: 1px #fff;
+	font-family: patMahomesBold;
+}
+
+/* .body__mahomies__title > span:hover {
+	-webkit-text-stroke: 1px yellow;
+	cursor: pointer;
+} */
+
+@media (max-width: 800px) {
+	.body__topCointainer__backgroundImage {
+		height: 117vw;
+		max-width: 100%;
+		object-fit: cover;
+		margin: 0;
+	}
+	.body__topContainer__title {
+		width: 60%;
+		left: 20%;
+		top: 65vw;
+	}
+}

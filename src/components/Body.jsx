@@ -11,7 +11,7 @@ import { products } from "../productsData";
 // Resolver imágenes de Product
 // Componente muy largo >>> Hacer una mayor división.
 
-const Body = () => {
+const Body = ({ cartCounter, setCartCounter }) => {
 	return (
 		<div className='layout'>
 			<div className='body'>
@@ -66,50 +66,22 @@ const Body = () => {
 						</p>
 					</div>
 				</div>
+				{/* PRODUCT GRID */}
+
 				<div className='body__productGrid'>
-					<div className='body__productGrid__first'>
-						{/* Deberia de poder mapear los Product */}
-						<Product
-							title={products[0].title}
-							price={products[0].price}
-							description={products[0].descriprion}
-						/>
-					</div>
-					<div>
-						<Product
-							title={products[1].title}
-							price={products[1].price}
-							description={products[1].descriprion}
-						/>
-					</div>
-					<div>
-						<Product
-							title={products[4].title}
-							price={products[4].price}
-							description={products[4].descriprion}
-						/>
-					</div>
-					<div>
-						<Product
-							title={products[2].title}
-							price={products[2].price}
-							description={products[2].descriprion}
-						/>
-					</div>
-					<div>
-						<Product
-							title={products[3].title}
-							price={products[3].price}
-							description={products[3].descriprion}
-						/>
-					</div>
-					<div className='body__productGrid__last'>
-						<Product
-							title={products[5].title}
-							price={products[5].price}
-							description={products[5].descriprion}
-						/>
-					</div>
+					{products.slice(0, 6).map((product) => {
+						return (
+							<Product
+								key={product.id}
+								title={product.title}
+								price={product.price}
+								description={product.description}
+								stock={product.stock}
+								cartCounter={cartCounter}
+								setCartCounter={setCartCounter}
+							/>
+						);
+					})}
 				</div>
 				<h2 className='body__shopAllTitle'>SHOP ALL</h2>
 

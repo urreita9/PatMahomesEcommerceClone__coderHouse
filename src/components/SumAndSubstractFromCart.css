@@ -1,0 +1,12 @@
+.buttons__container {
+	display: flex;
+	align-items: center;
+}
+span {
+	color: white;
+}
+button {
+	border: 0;
+	background-color: black;
+	color: yellow;
+}

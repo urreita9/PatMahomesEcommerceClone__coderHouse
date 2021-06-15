@@ -11,6 +11,11 @@
 	width: 100%;
 	background-color: white;
 }
+.product__info {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
 .product__info > p {
 	color: white;
 	font-family: patMahomesRegular;
@@ -20,3 +25,18 @@
 	color: yellow;
 	font-family: patMahomesRegular;
 }
+
+/* Grid location of first and last child */
+.product:first-child {
+	grid-row-start: 1;
+	grid-column-start: 1;
+	grid-row-end: 3;
+	grid-column-end: 3;
+}
+.product:last-child {
+	grid-row-start: 2;
+	grid-column-start: 3;
+	grid-row-end: 4;
+	grid-column-end: 5;
+}
+/* .product:first-child */

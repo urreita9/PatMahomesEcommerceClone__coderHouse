@@ -94,20 +94,6 @@
 	grid-template-rows: repeat(3, 1fr);
 }
 
-.body__productGrid__first {
-	grid-row-start: 1;
-	grid-column-start: 1;
-	grid-row-end: 3;
-	grid-column-end: 3;
-}
-
-.body__productGrid__last {
-	grid-row-start: 2;
-	grid-column-start: 3;
-	grid-row-end: 4;
-	grid-column-end: 5;
-}
-
 /* SHOP ALL TITLE */
 .body__shopAllTitle {
 	margin-top: 40px;

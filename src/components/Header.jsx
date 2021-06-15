@@ -3,7 +3,7 @@ import NavBarDesktop from "./NavBarDesktop";
 import NavBarMobile from "./NavBarMobile";
 import "./Header.css";
 
-export const Header = () => {
+export const Header = ({ cartCounter }) => {
 	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 	const [mobile, setMobile] = useState(true);
 	const menuItems = mobile
@@ -24,9 +24,17 @@ export const Header = () => {
 	return (
 		<>
 			{screenWidth > 799 ? (
-				<NavBarDesktop items={menuItems} mobile={mobile} />
+				<NavBarDesktop
+					items={menuItems}
+					mobile={mobile}
+					cartCounter={cartCounter}
+				/>
 			) : (
-				<NavBarMobile items={menuItems} mobile={mobile} />
+				<NavBarMobile
+					items={menuItems}
+					mobile={mobile}
+					cartCounter={cartCounter}
+				/>
 			)}
 		</>
 	);

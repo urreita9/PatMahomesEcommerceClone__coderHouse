@@ -4,7 +4,7 @@ import ClearIcon from "@material-ui/icons/Clear";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import ItemListContainer from "./ItemListContainer";
 
-const NavBarMobile = ({ items, mobile }) => {
+const NavBarMobile = ({ items, mobile, cartCounter }) => {
 	const [isMenuClicked, setIsMenuClicked] = useState(false);
 	const handleMenuClick = () => {
 		setIsMenuClicked(!isMenuClicked);
@@ -21,7 +21,7 @@ const NavBarMobile = ({ items, mobile }) => {
 				<div className='navBar__right'>
 					<div className='navBar__right__cart'>
 						<ShoppingCartIcon />
-						<div className='navBar__right__cart__itemsCount'>0</div>
+						<div className='navBar__right__cart__itemsCount'>{cartCounter}</div>
 					</div>
 				</div>
 			</div>

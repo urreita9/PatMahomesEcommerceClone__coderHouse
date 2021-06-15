@@ -1,8 +1,9 @@
 import React from "react";
 import "./Header.css";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+
 import ItemListContainer from "./ItemListContainer";
-const NavBar = ({ items, mobile }) => {
+const NavBar = ({ items, mobile, cartCounter }) => {
 	return (
 		<div className='navBar'>
 			<div className='navBar__left'>
@@ -11,7 +12,7 @@ const NavBar = ({ items, mobile }) => {
 			<div className='navBar__right'>
 				<div className='navBar__right__cart'>
 					<ShoppingCartIcon />
-					<div className='navBar__right__cart__itemsCount'>0</div>
+					<div className='navBar__right__cart__itemsCount'>{cartCounter}</div>
 				</div>
 			</div>
 		</div>

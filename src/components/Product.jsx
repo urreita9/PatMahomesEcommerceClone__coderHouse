@@ -1,8 +1,16 @@
 import React from "react";
 import productImage from "../assets/PM-Run-It-Back-Tee-Front.png";
 import "./Product.css";
+import SumAndSubstractFromCart from "./SumAndSubstractFromCart";
 
-const Product = ({ title, price, description }) => {
+const Product = ({
+	title,
+	price,
+	description,
+	stock,
+	cartCounter,
+	setCartCounter,
+}) => {
 	return (
 		<div className='product'>
 			<img className='product__image' src={productImage} alt='productImage' />
@@ -11,6 +19,11 @@ const Product = ({ title, price, description }) => {
 					{title}
 					<span> $ {price}</span>
 				</p>
+				<SumAndSubstractFromCart
+					stock={stock}
+					cartCounter={cartCounter}
+					setCartCounter={setCartCounter}
+				/>
 			</div>
 		</div>
 	);

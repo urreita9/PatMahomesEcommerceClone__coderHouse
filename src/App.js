@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Body from "./components/Body";
 import Header from "./components/Header";
@@ -11,10 +12,12 @@ function App() {
 	// Todavía no se muy bien como trabajar las imágenes y si los productos los tendremos que volcar en alguna BD.
 	// Circunstancialmente, sirve para avanzar.
 
+	const [cartCounter, setCartCounter] = useState(0);
+
 	return (
 		<div className='App'>
-			<Header />
-			<Body />
+			<Header cartCounter={cartCounter} />
+			<Body setCartCounter={setCartCounter} cartCounter={cartCounter} />
 		</div>
 	);
 }

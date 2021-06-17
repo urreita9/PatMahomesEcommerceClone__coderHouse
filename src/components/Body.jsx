@@ -4,8 +4,9 @@ import backgroundImage from "../assets/background_image.png";
 import mobile_background_image from "../assets/1--mobile.png";
 import backgroundImage2 from "../assets/mahomes.jpg";
 import mahomies from "../assets/mahomies.jpg";
-import Product from "./Product";
-import { products } from "../productsData";
+// import Product from "./Product";
+import ProductListContainer from "./ProductListContainer";
+// import { products } from "../productsData";
 
 // Importación de imágenes >>> CAMBIAR
 // Resolver imágenes de Product
@@ -30,6 +31,7 @@ const Body = ({ cartCounter, setCartCounter }) => {
 					<h1 className='body__topContainer__title'>
 						<span>PATRICK</span> MAHOMES II
 					</h1>
+
 					{/*  Marquesina */}
 					<div className='body__topContainer__marquee'>
 						<p
@@ -67,22 +69,10 @@ const Body = ({ cartCounter, setCartCounter }) => {
 					</div>
 				</div>
 				{/* PRODUCT GRID */}
-
-				<div className='body__productGrid'>
-					{products.slice(0, 6).map((product) => {
-						return (
-							<Product
-								key={product.id}
-								title={product.title}
-								price={product.price}
-								description={product.description}
-								stock={product.stock}
-								cartCounter={cartCounter}
-								setCartCounter={setCartCounter}
-							/>
-						);
-					})}
-				</div>
+				<ProductListContainer
+					cartCounter={cartCounter}
+					setCartCounter={setCartCounter}
+				/>
 				<h2 className='body__shopAllTitle'>SHOP ALL</h2>
 
 				<img

@@ -16,7 +16,7 @@
 	background-color: black;
 }
 .body {
-	width: 100vw;
+	/* width: 100vw; */
 	background-color: black;
 	margin: 0;
 	overflow: hidden;

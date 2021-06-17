@@ -6,7 +6,6 @@ import "./SumAndSubstractFromCart.css";
 const SumAndSubstractFromCart = ({ cartCounter, setCartCounter, stock }) => {
 	const [thisProductAmount, setThisProductAmount] = useState(0);
 	const [outOfStock, setOutOfStock] = useState(false);
-
 	return (
 		<div className='buttons__container'>
 			<button

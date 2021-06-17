@@ -1,7 +1,8 @@
-export const products = [
+export const productsFromFile = [
 	{
 		id: 1,
 		title: "THE COMEBACK KINGDOM TEE",
+		img: "/images/PM-Comeback-Kingdom-Tee-Oatmeal-Front.png",
 		price: 35,
 		stock: 3,
 		description:
@@ -10,6 +11,7 @@ export const products = [
 	{
 		id: 2,
 		title: "RUN IT BACK EVERYDAY TEE",
+		img: "/images/PM-Run-It-Back-Tee-Front.png",
 		price: 35,
 		stock: 2,
 		description:
@@ -18,6 +20,7 @@ export const products = [
 	{
 		id: 3,
 		title: "RUN IT BACK MASK",
+		img: "/images/PM-Run-It-Back-Mask.png",
 		price: 15,
 		stock: 4,
 		description:
@@ -26,6 +29,7 @@ export const products = [
 	{
 		id: 4,
 		title: "THE PATRICK HAT",
+		img: "/images/PM-Beanie-1b.png",
 		price: 30,
 		stock: 6,
 		description:
@@ -34,6 +38,7 @@ export const products = [
 	{
 		id: 5,
 		title: "COMEBACK KINGDOM MASK",
+		img: "/images/PM-Comeback-Kingdom-Mask.png",
 		price: 15,
 		stock: 0,
 		description:
@@ -42,6 +47,8 @@ export const products = [
 	{
 		id: 6,
 		title: "THE 2PM TEE",
+		img: "/images/PM-Repeater-Tee-Front.png",
+
 		price: 35,
 		stock: 8,
 		description:
@@ -50,6 +57,8 @@ export const products = [
 	{
 		id: 7,
 		title: "#15 PROMISE TEE",
+		img: "/images/PM-Repeater-Tee-Front.png",
+
 		price: 35,
 		stock: 4,
 		description:
@@ -58,6 +67,7 @@ export const products = [
 	{
 		id: 8,
 		title: "2PM SHOWTIME LTD TEE",
+		img: "/images/PM-Repeater-Tee-Front.png",
 		price: 35,
 		stock: 3,
 		description:
@@ -66,6 +76,8 @@ export const products = [
 	{
 		id: 9,
 		title: "MAHOMES POM BEANIE",
+		img: "/images/PM-Repeater-Tee-Front.png",
+
 		price: 25,
 		stock: 2,
 		description:
@@ -74,9 +86,13 @@ export const products = [
 	{
 		id: 10,
 		title: "CLASSIC MAHOMES KNIT HAT",
+		img: "/images/PM-Repeater-Tee-Front.png",
+
 		price: 25,
 		stock: 1,
 		description:
 			"Give everything you got without getting cold in the Classic Mahomes Knit Hat. Made for long winters in the Comeback Kingdom with extra thick cuff and knitting. Featuring bold embroidering on the front.",
 	},
 ];
+
+console.log(JSON.stringify(productsFromFile));

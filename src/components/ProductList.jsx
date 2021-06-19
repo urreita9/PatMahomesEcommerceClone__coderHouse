@@ -1,25 +1,41 @@
 import React from "react";
 import Product from "./Product";
+
+import SliderContainer from "./SliderContainer";
 import "./Body.css";
 
-const ProductList = ({ setCartCounter, cartCounter, products }) => {
+const ProductList = ({
+	setCartCounter,
+	cartCounter,
+	products,
+	displayClassName,
+	slider,
+}) => {
 	return (
-		<div className='body__productGrid'>
-			{products.slice(0, 6).map((product) => {
-				return (
-					<Product
-						key={product.id}
-						img={product.img}
-						title={product.title}
-						price={product.price}
-						description={product.description}
-						stock={product.stock}
-						cartCounter={cartCounter}
-						setCartCounter={setCartCounter}
-					/>
-				);
-			})}
-			{console.log(products)}
+		<div className={displayClassName}>
+			{slider ? (
+				<SliderContainer
+					setCartCounter={setCartCounter}
+					cartCounter={cartCounter}
+					products={products}
+				/>
+			) : (
+				products.slice(0, 6).map((product) => {
+					return (
+						<Product
+							displayProduct='productInGrid'
+							key={product.id}
+							img={product.img}
+							title={product.title}
+							price={product.price}
+							description={product.description}
+							stock={product.stock}
+							cartCounter={cartCounter}
+							setCartCounter={setCartCounter}
+						/>
+					);
+				})
+			)}
 		</div>
 	);
 };

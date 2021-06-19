@@ -93,7 +93,37 @@
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 }
+/* PRODUCT SLIDER */
 
+.slider__container .product__slider {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* height: 80vh; */
+	width: 100%;
+	margin: 20px;
+}
+.product_slider {
+	justify-content: space-between;
+}
+.productInSlide {
+	margin: 20px;
+}
+
+.slider__button {
+	border: none;
+	background-color: red;
+	position: relative;
+	top: 50%;
+	z-index: 10;
+	cursor: pointer;
+}
+.prev__product {
+	left: 32px;
+}
+.next__product {
+	right: 32px;
+}
 /* SHOP ALL TITLE */
 .body__shopAllTitle {
 	margin-top: 40px;
@@ -125,7 +155,7 @@
 
 /* Mahomies Title */
 .body__mahomies {
-	margin-top: 1vw;
+	margin-top: 50px;
 }
 .body__mahomies__title {
 	font-family: patMahomesBold;

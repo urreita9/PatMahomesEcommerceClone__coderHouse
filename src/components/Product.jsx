@@ -4,6 +4,7 @@ import "./Product.css";
 import SumAndSubstractFromCart from "./SumAndSubstractFromCart";
 
 const Product = ({
+	displayProduct,
 	title,
 	price,
 	img,
@@ -11,10 +12,10 @@ const Product = ({
 	stock,
 	cartCounter,
 	setCartCounter,
+	slider,
 }) => {
-	console.log(img);
 	return (
-		<div className='product'>
+		<div className={displayProduct}>
 			<img className='product__image' src={img} alt='productImage' />
 			<div className='product__info'>
 				<p>

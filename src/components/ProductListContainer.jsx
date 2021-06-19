@@ -3,7 +3,7 @@ import ProductList from "./ProductList";
 import { getData } from "../helpers/getData";
 // import { productsFromFile } from "../productsData";
 
-const ProductListContainer = ({ cartCounter, setCartCounter }) => {
+const ProductListContainer = ({ cartCounter, setCartCounter, slider }) => {
 	const [products, setProducts] = useState([]);
 	useEffect(() => {
 		getData().then((data) => setProducts(data));
@@ -14,6 +14,8 @@ const ProductListContainer = ({ cartCounter, setCartCounter }) => {
 				products={products}
 				cartCounter={cartCounter}
 				setCartCounter={setCartCounter}
+				displayClassName={slider ? "slider__container" : "body__productGrid"}
+				slider={slider}
 			/>
 		</>
 	);

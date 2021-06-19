@@ -45,6 +45,7 @@ const Body = ({ cartCounter, setCartCounter }) => {
 				<ProductListContainer
 					cartCounter={cartCounter}
 					setCartCounter={setCartCounter}
+					slider={false}
 				/>
 				<h2 className='body__shopAllTitle'>SHOP ALL</h2>
 
@@ -61,6 +62,11 @@ const Body = ({ cartCounter, setCartCounter }) => {
 				/>
 
 				{/* Product Slider */}
+				<ProductListContainer
+					cartCounter={cartCounter}
+					setCartCounter={setCartCounter}
+					slider={true}
+				/>
 				<section className='body__mahomies'>
 					<h2 className='body__mahomies__title'>
 						15 <span>AND THE </span> <br /> MAHOMIES

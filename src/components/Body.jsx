@@ -1,11 +1,12 @@
 import React from "react";
+import ProductListContainer from "./ProductListContainer";
+import Marquee from "./Marquee";
 import "./Body.css";
 import backgroundImage from "../assets/background_image.png";
 import mobile_background_image from "../assets/1--mobile.png";
 import backgroundImage2 from "../assets/mahomes.jpg";
 import mahomies from "../assets/mahomies.jpg";
 // import Product from "./Product";
-import ProductListContainer from "./ProductListContainer";
 // import { products } from "../productsData";
 
 // Importación de imágenes >>> CAMBIAR
@@ -33,40 +34,12 @@ const Body = ({ cartCounter, setCartCounter }) => {
 					</h1>
 
 					{/*  Marquesina */}
-					<div className='body__topContainer__marquee'>
-						<p
-							className='body__topContainer__marquee__text'
-							data-text='OFFICIAL MERCH STORE OF PATRICK MAHOMES • SHOWTIME • OFFICIAL MERCH
+					<Marquee
+						marqueeContainerClassName='body__topContainer__marquee'
+						marqueeTextClassName='body__topContainer__marquee__text'
+						dataText='OFFICIAL MERCH STORE OF PATRICK MAHOMES • SHOWTIME • OFFICIAL MERCH
 						STORE OF PATRICK MAHOMES • SHOWTIME •'
-						>
-							OFFICIAL MERCH STORE OF PATRICK MAHOMES • SHOWTIME • OFFICIAL
-							MERCH STORE OF PATRICK MAHOMES • SHOWTIME •
-						</p>
-						<p
-							className='body__topContainer__marquee__text'
-							data-text='OFFICIAL MERCH STORE OF PATRICK MAHOMES • SHOWTIME • OFFICIAL MERCH
-						STORE OF PATRICK MAHOMES • SHOWTIME •'
-						>
-							OFFICIAL MERCH STORE OF PATRICK MAHOMES • SHOWTIME • OFFICIAL
-							MERCH STORE OF PATRICK MAHOMES • SHOWTIME •
-						</p>
-						<p
-							className='body__topContainer__marquee__text'
-							data-text='OFFICIAL MERCH STORE OF PATRICK MAHOMES • SHOWTIME • OFFICIAL MERCH
-						STORE OF PATRICK MAHOMES • SHOWTIME •'
-						>
-							OFFICIAL MERCH STORE OF PATRICK MAHOMES • SHOWTIME • OFFICIAL
-							MERCH STORE OF PATRICK MAHOMES • SHOWTIME •
-						</p>
-						<p
-							className='body__topContainer__marquee__text'
-							data-text='OFFICIAL MERCH STORE OF PATRICK MAHOMES • SHOWTIME • OFFICIAL MERCH
-						STORE OF PATRICK MAHOMES • SHOWTIME •'
-						>
-							OFFICIAL MERCH STORE OF PATRICK MAHOMES • SHOWTIME • OFFICIAL
-							MERCH STORE OF PATRICK MAHOMES • SHOWTIME •
-						</p>
-					</div>
+					/>
 				</div>
 				{/* PRODUCT GRID */}
 				<ProductListContainer
@@ -80,24 +53,13 @@ const Body = ({ cartCounter, setCartCounter }) => {
 					src={backgroundImage2}
 					alt=''
 				/>
-				<div className='body__secondMarquee'>
-					<p className='body__topContainer__marquee__text'>
-						Every experience, good or bad, you have to learn from • Whatever it
-						takes to get a win is the biggest thing •
-					</p>
-					<p className='body__topContainer__marquee__text'>
-						Every experience, good or bad, you have to learn from • Whatever it
-						takes to get a win is the biggest thing •
-					</p>
-					<p className='body__topContainer__marquee__text'>
-						Every experience, good or bad, you have to learn from • Whatever it
-						takes to get a win is the biggest thing •
-					</p>
-					<p className='body__topContainer__marquee__text'>
-						Every experience, good or bad, you have to learn from • Whatever it
-						takes to get a win is the biggest thing •
-					</p>
-				</div>
+				<Marquee
+					marqueeContainerClassName='body__secondMarquee'
+					marqueeTextClassName='body__topContainer__marquee__text'
+					dataText='Every experience, good or bad, you have to learn from • Whatever it
+						takes to get a win is the biggest thing •'
+				/>
+
 				{/* Product Slider */}
 				<section className='body__mahomies'>
 					<h2 className='body__mahomies__title'>

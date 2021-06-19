@@ -2,9 +2,14 @@ import React from "react";
 // import "./NavMobile.css";
 import "./Header.css";
 
-const ItemListContainer = ({ items, mobile }) => {
+const ItemListContainer = ({ items, mobile, clearIcon, handleMenuClick }) => {
 	return (
 		<div className={mobile ? "navMobile" : "navBar__left"}>
+			<div onClick={handleMenuClick} className='menuIcon'>
+				{clearIcon}
+				<span></span>
+			</div>
+
 			<ul className={mobile ? "navMobile__list" : "navBar__left__menuItems"}>
 				{items.map((item) => {
 					return (

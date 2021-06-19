@@ -26,7 +26,14 @@ const NavBarMobile = ({ items, mobile, cartCounter }) => {
 				</div>
 			</div>
 			{/* {isClicked && <NavMobile items={menuItems} />} */}
-			{isMenuClicked && <ItemListContainer items={items} mobile={mobile} />}
+			{isMenuClicked && (
+				<ItemListContainer
+					items={items}
+					mobile={mobile}
+					clearIcon={<ClearIcon />}
+					handleMenuClick={handleMenuClick}
+				/>
+			)}
 		</>
 	);
 };

@@ -80,10 +80,8 @@
 	color: yellow;
 }
 
-/* .menuIcon {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 10;
-	color: white;
-} */
+.menuIcon {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

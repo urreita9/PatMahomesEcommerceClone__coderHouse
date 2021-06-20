@@ -37,6 +37,7 @@ export default function SliderContainer({
 							<Product
 								// displayProduct='productInGrid'
 								key={product.id}
+								id={product.id}
 								img={product.img}
 								title={product.title}
 								price={product.price}

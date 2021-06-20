@@ -22,10 +22,12 @@
 	align-items: center;
 }
 
-.navBar__left__menuItems__items {
+.navBar__left__menuItems__items a {
+	text-decoration: none;
+	color: white;
 	padding: 10px;
 }
-.navBar__left__menuItems__items:hover {
+.navBar__left__menuItems__items a:hover {
 	color: yellow;
 	cursor: pointer;
 }
@@ -45,6 +47,7 @@
 	margin-right: 20px;
 	padding: 3px;
 	border: 1px solid white;
+	text-align: center;
 }
 
 @media (max-width: 800px) {
@@ -73,10 +76,12 @@
 	text-align: left;
 }
 
-.navMobile__list__item {
+.navMobile__list__item a {
+	text-decoration: none;
+	color: white;
 	font-family: patMahomesBold;
 }
-.navMobile__list__item:hover {
+.navMobile__list__item a:hover {
 	color: yellow;
 }
 

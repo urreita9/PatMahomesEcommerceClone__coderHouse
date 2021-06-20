@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import "./NavMobile.css";
 import "./Header.css";
 
@@ -11,20 +12,32 @@ const ItemListContainer = ({ items, mobile, clearIcon, handleMenuClick }) => {
 			</div>
 
 			<ul className={mobile ? "navMobile__list" : "navBar__left__menuItems"}>
-				{items.map((item) => {
-					return (
-						<li
-							key={item}
-							className={
-								mobile
-									? "navMobile__list__item"
-									: "navBar__left__menuItems__items"
-							}
-						>
-							{item}
-						</li>
-					);
-				})}
+				{mobile && (
+					<li className='navMobile__list__item'>
+						<Link to='/'>HOME</Link>
+					</li>
+				)}
+				<li
+					className={
+						mobile ? "navMobile__list__item" : "navBar__left__menuItems__items"
+					}
+				>
+					<Link to='/all'>SHOP</Link>
+				</li>
+				<li
+					className={
+						mobile ? "navMobile__list__item" : "navBar__left__menuItems__items"
+					}
+				>
+					<Link to='/about'>ABOUT</Link>
+				</li>
+				<li
+					className={
+						mobile ? "navMobile__list__item" : "navBar__left__menuItems__items"
+					}
+				>
+					<Link to='/faq'>FAQ</Link>
+				</li>
 			</ul>
 		</div>
 	);

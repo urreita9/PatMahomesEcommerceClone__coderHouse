@@ -1,0 +1,41 @@
+.body__topContainer {
+	display: flex;
+	flex-direction: column;
+}
+.body__topCointainer__backgroundImage {
+	width: 100vw;
+	height: 51vw;
+	object-fit: cover;
+	margin-top: -41px;
+}
+.body__topContainer__title {
+	font-family: patMahomesBold;
+	font-weight: lighter;
+	/* margin-top: -53vh; */
+	position: absolute;
+	top: 29vw;
+	text-align: center;
+	color: white;
+	font-size: 16.2vw;
+	width: 100%;
+	/* letter-spacing: -0.1em; */
+}
+
+.body__topContainer__title > span {
+	color: transparent;
+	-webkit-text-stroke: 1px #fff;
+	font-family: patMahomesBold;
+}
+@media (max-width: 800px) {
+	.body__topCointainer__backgroundImage {
+		height: 117vw;
+		max-width: 100%;
+		object-fit: cover;
+		margin: 0;
+	}
+	.body__topContainer__title {
+		width: 60%;
+		left: 20%;
+		top: 65vw;
+	}
+}

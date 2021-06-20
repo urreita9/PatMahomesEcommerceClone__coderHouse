@@ -1,0 +1,30 @@
+/* SHOP ALL TITLE */
+@font-face {
+	src: url(../assets/F37JudgeTest-BoldCondensed.otf);
+	font-family: patMahomesBold;
+}
+.shopAll__container {
+	max-width: 95vw;
+	margin: 0 auto;
+}
+.shopAll__Title {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-family: patMahomesBold;
+	color: white;
+	font-size: 15.2vw;
+	text-align: center;
+}
+.shopAll__Title:hover {
+	color: yellow;
+	cursor: pointer;
+}
+
+/* 2ND BackGround Image */
+.shopAll__image__container {
+	max-width: 100%;
+}
+.body__topCointainer__backgroundImage2 {
+	max-width: 90%;
+	margin: 0 auto;
+}

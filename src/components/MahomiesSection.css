@@ -1,0 +1,32 @@
+/* Mahomies Title */
+.mahomies {
+	margin-top: 50px;
+	max-width: 95vw;
+	margin: 0 auto;
+}
+.mahomies__title {
+	font-family: patMahomesBold;
+	font-weight: lighter;
+	/* margin-top: -53vh; */
+	color: white;
+	font-size: 14.2vw;
+	width: 90vw;
+	text-align: left;
+	margin: 0;
+	line-height: 85%;
+}
+
+.mahomies__title:hover {
+	color: yellow;
+	cursor: pointer;
+}
+.mahomies__title > span {
+	color: transparent;
+	-webkit-text-stroke: 1px #fff;
+	font-family: patMahomesBold;
+}
+
+.mahomies__image__container {
+	max-width: 95vw;
+	margin: 0 auto;
+}

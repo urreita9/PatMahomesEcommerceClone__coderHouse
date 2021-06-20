@@ -2,7 +2,7 @@ import React from "react";
 import Product from "./Product";
 
 import SliderContainer from "./SliderContainer";
-import "./Body.css";
+import "./ProductListGrid.css";
 
 const ProductList = ({
 	setCartCounter,
@@ -25,6 +25,7 @@ const ProductList = ({
 						<Product
 							displayProduct='productInGrid'
 							key={product.id}
+							id={product.id}
 							img={product.img}
 							title={product.title}
 							price={product.price}

@@ -1,0 +1,9 @@
+.body__productGrid {
+	width: 90vw;
+	margin: 0 auto;
+	display: grid;
+	grid-column-gap: 2.431vw;
+	grid-row-gap: 1vw;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+}

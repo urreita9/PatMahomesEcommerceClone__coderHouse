@@ -1,0 +1,39 @@
+/* Marquee */
+.body__topContainer__marquee {
+	width: 100vw;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+}
+.body__topContainer__marquee__text {
+	font-size: 40px;
+	font-family: patMahomesRegular;
+
+	color: white;
+	font-weight: 100;
+	text-transform: uppercase;
+	animation: marquee 100s linear infinite;
+}
+.body__topContainer__marquee__text::before {
+	content: attr(data-text);
+}
+.body__topContainer__marquee__text::after {
+	content: attr(data-text);
+}
+.body__secondMarquee {
+	width: 100vw;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+}
+@keyframes marquee {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}

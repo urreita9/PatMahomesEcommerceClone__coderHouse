@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import productImage from "../assets/PM-Run-It-Back-Tee-Front.png";
 import "./Product.css";
 import SumAndSubstractFromCart from "./SumAndSubstractFromCart";
 
@@ -12,8 +11,6 @@ const Product = ({
 	img,
 	description,
 	stock,
-	cartCounter,
-	setCartCounter,
 	slider,
 }) => {
 	return (
@@ -26,11 +23,7 @@ const Product = ({
 					{title}
 					<span> $ {price}</span>
 				</p>
-				<SumAndSubstractFromCart
-					stock={stock}
-					cartCounter={cartCounter}
-					setCartCounter={setCartCounter}
-				/>
+				<SumAndSubstractFromCart stock={stock} />
 			</div>
 		</div>
 	);

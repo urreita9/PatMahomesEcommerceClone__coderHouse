@@ -13,17 +13,13 @@ import "./Body.css";
 // Resolver imágenes de Product
 // Componente muy largo >>> Hacer una mayor división.
 
-const Body = ({ cartCounter, setCartCounter }) => {
+const Body = () => {
 	return (
 		<div className='layout'>
 			<div className='body'>
 				<BodyTop />
 				{/* PRODUCT GRID */}
-				<ProductListContainer
-					cartCounter={cartCounter}
-					setCartCounter={setCartCounter}
-					slider={false}
-				/>
+				<ProductListContainer slider={false} />
 
 				<Marquee
 					marqueeContainerClassName='body__secondMarquee'
@@ -33,11 +29,7 @@ const Body = ({ cartCounter, setCartCounter }) => {
 				/>
 				<ShopAllSection />
 				{/* Product Slider */}
-				<ProductListContainer
-					cartCounter={cartCounter}
-					setCartCounter={setCartCounter}
-					slider={true}
-				/>
+				<ProductListContainer slider={true} />
 				<MahomiesSection />
 			</div>
 		</div>

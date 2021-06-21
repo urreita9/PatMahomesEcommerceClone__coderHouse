@@ -6,54 +6,54 @@
 	src: url(../assets/F37JudgeTest-MediumCondensed.otf);
 	font-family: patMahomesMedium;
 }
-.product__card__container {
+.productCard__card__container {
 	margin: 80px auto 30px auto;
 	max-width: 90vw;
 	justify-content: space-between;
 	display: flex;
 }
-.product__image {
+.productCard__image {
 	max-width: 50%;
 	margin: 0 auto;
 	background-color: black;
 }
-.product__image__img {
+.productCard__image__img {
 	background-color: white;
 	max-width: 90%;
 	max-height: 100%;
 }
 
-.product__info {
+.productCard__info {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 }
-.product__info__topContainer {
+.productCard__info__topContainer {
 	display: flex;
 	justify-content: space-between;
 	padding-bottom: 20px;
 	border-bottom: 1px solid white;
 	width: 100%;
 }
-.product__info__topContainer h1,
-span {
+.productCard__info__topContainer__title__h1,
+.productCard__info__topContainer__title__span {
 	font-family: patMahomesBold;
 	font-size: 6vw;
 	letter-spacing: -0.01em;
 	line-height: 0.8;
 }
 
-.product__info__topContainer__title {
+.productCard__info__topContainer__title {
 	max-width: 60%;
 }
-.product__info__topContainer__price span {
+.productCard__info__topContainer__price span {
 	color: #fcee21;
 }
-.product__info__bottomContainer {
+.productCard__info__bottomContainer {
 	display: flex;
 	flex-direction: column;
 }
-.product__info__bottomContainer button {
+.productCard__info__bottomContainer button {
 	font-family: patMahomesMedium;
 	font-size: 3vw;
 	cursor: pointer;
@@ -62,4 +62,10 @@ span {
 	margin: 20px auto;
 	background-color: #fcee21;
 	color: black;
+}
+
+.more__products {
+	font-family: patMahomesBold;
+	font-size: 4vw;
+	text-align: center;
 }

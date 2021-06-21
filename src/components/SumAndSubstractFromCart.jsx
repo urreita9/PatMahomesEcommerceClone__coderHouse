@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
 import "./SumAndSubstractFromCart.css";
+import { CartContext } from "./CartContext";
 
-const SumAndSubstractFromCart = ({ cartCounter, setCartCounter, stock }) => {
+const SumAndSubstractFromCart = ({ stock }) => {
 	const [thisProductAmount, setThisProductAmount] = useState(0);
 	const [outOfStock, setOutOfStock] = useState(false);
+	const { cartCounter, setCartCounter } = useContext(CartContext);
+
 	return (
 		<div className='buttons__container'>
 			<button

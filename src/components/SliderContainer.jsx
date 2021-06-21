@@ -12,17 +12,13 @@ import SwiperCore, { Pagination, Navigation } from "swiper/core";
 
 SwiperCore.use([Pagination, Navigation]);
 
-export default function SliderContainer({
-	cartCounter,
-	setCartCounter,
-	products,
-}) {
+export default function SliderContainer({ products }) {
 	return (
 		<div className='slider'>
 			<Swiper
 				slidesPerView={3}
 				spaceBetween={30}
-				slidesPerGroup={3}
+				slidesPerGroup={1}
 				loop={true}
 				loopFillGroupWithBlank={true}
 				pagination={{
@@ -34,18 +30,7 @@ export default function SliderContainer({
 				{products.map((product, index) => {
 					return (
 						<SwiperSlide key={index}>
-							<Product
-								// displayProduct='productInGrid'
-								key={product.id}
-								id={product.id}
-								img={product.img}
-								title={product.title}
-								price={product.price}
-								description={product.description}
-								stock={product.stock}
-								cartCounter={cartCounter}
-								setCartCounter={setCartCounter}
-							/>
+							<Product {...product} />
 						</SwiperSlide>
 					);
 				})}

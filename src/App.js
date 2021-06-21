@@ -1,8 +1,10 @@
+import { useState } from "react";
+import AppRouter from "./router/AppRouter";
+import { CartContext } from "./components/CartContext";
 // import { useState } from "react";
 import "./App.css";
 // import Body from "./components/Body";
 // import Header from "./components/Header";
-import AppRouter from "./router/AppRouter";
 
 function App() {
 	// Esta aplicación pretende ser un clon de 'https://patrickmahomes.com/'.
@@ -14,8 +16,18 @@ function App() {
 	// Circunstancialmente, sirve para avanzar.
 
 	// const [cartCounter, setCartCounter] = useState(0);
+	const [cartCounter, setCartCounter] = useState(0);
 
-	return <AppRouter />;
+	return (
+		<CartContext.Provider
+			value={{
+				cartCounter,
+				setCartCounter,
+			}}
+		>
+			<AppRouter />
+		</CartContext.Provider>
+	);
 }
 
 export default App;

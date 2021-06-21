@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 import ClearIcon from "@material-ui/icons/Clear";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import ItemListContainer from "./ItemListContainer";
+import { CartContext } from "./CartContext";
 
-const NavBarMobile = ({ items, mobile, cartCounter }) => {
+const NavBarMobile = ({ items, mobile }) => {
 	const [isMenuClicked, setIsMenuClicked] = useState(false);
+	const { cartCounter } = useContext(CartContext);
+
 	const handleMenuClick = () => {
 		setIsMenuClicked(!isMenuClicked);
 	};
+
 	return (
 		<>
 			<div className='navBar'>

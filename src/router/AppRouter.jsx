@@ -6,7 +6,7 @@ import {
 	Redirect,
 } from "react-router-dom";
 import AboutScreen from "../components/AboutScreen";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import HomeScreen from "../components/HomeScreen";
 import ProductScreen from "../components/ProductScreen";
 import ShopScreen from "../components/ShopScreen";

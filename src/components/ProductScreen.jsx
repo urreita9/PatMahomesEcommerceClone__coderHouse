@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import Header from "./Header";
 import ProductCard from "./ProductCard";
 import ProductListContainer from "./ProductListContainer";
+import MoreProducts from "./MoreProducts";
 import { getData } from "../helpers/getData";
 
 const ProductScreen = () => {
@@ -12,12 +13,12 @@ const ProductScreen = () => {
 		getData().then((data) => {
 			setProduct(data.find((product) => product.id === parseInt(productId)));
 		});
-	}, []);
+	}, [productId]);
 	return (
 		<div>
 			<Header />
 			<ProductCard {...product} />
-			<h2>MORE PRODUCTS</h2>
+			<MoreProducts />
 			<ProductListContainer
 				// cartCounter={cartCounter}
 				// setCartCounter={setCartCounter}

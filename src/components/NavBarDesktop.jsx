@@ -1,9 +1,12 @@
-import React from "react";
-import "./Header.css";
+import React, { useContext } from "react";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-
+import { CartContext } from "./CartContext";
 import ItemListContainer from "./ItemListContainer";
-const NavBar = ({ items, mobile, cartCounter }) => {
+import "./Header.css";
+
+const NavBar = ({ items, mobile }) => {
+	const { cartCounter } = useContext(CartContext);
+
 	return (
 		<div className='navBar'>
 			<div className='navBar__left'>

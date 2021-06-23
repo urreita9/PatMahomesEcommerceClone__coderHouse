@@ -1,4 +1,6 @@
 import React, { useState, useContext } from "react";
+import CartDisplay from "./CartDisplay";
+
 import MenuIcon from "@material-ui/icons/Menu";
 import ClearIcon from "@material-ui/icons/Clear";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
@@ -7,14 +9,19 @@ import { CartContext } from "./CartContext";
 
 const NavBarMobile = ({ items, mobile }) => {
 	const [isMenuClicked, setIsMenuClicked] = useState(false);
-	const { cartCounter } = useContext(CartContext);
+	const { cartCounter, setOpenCart, openCart } = useContext(CartContext);
 
 	const handleMenuClick = () => {
 		setIsMenuClicked(!isMenuClicked);
 	};
 
+	const handleCartClick = () => {
+		setOpenCart(true);
+	};
 	return (
 		<>
+			{openCart ? <CartDisplay /> : null}
+
 			<div className='navBar'>
 				<div className='navBar__left'>
 					<div className='menuIcon' onClick={handleMenuClick}>
@@ -24,7 +31,10 @@ const NavBarMobile = ({ items, mobile }) => {
 				{/* <div className='mobileMenu'></div> */}
 				<div className='navBar__right'>
 					<div className='navBar__right__cart'>
-						<ShoppingCartIcon />
+						<div onClick={handleCartClick}>
+							<ShoppingCartIcon />
+						</div>
+
 						<div className='navBar__right__cart__itemsCount'>{cartCounter}</div>
 					</div>
 				</div>

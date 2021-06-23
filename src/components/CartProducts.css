@@ -1,0 +1,27 @@
+.cartProducts__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	border-bottom: 1px solid white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	position: relative;
+	top: 0;
+}
+.cartProducts__container__image__container {
+	/* max-width: 30%; */
+	/* flex: 10%; */
+	max-width: 20%;
+}
+.cartProducts__container__image__container__image {
+	/* width: 100px; */
+	max-width: 100%;
+	background-color: white;
+}
+.cartProducts__counter {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}

@@ -19,11 +19,7 @@ const ProductScreen = () => {
 			<Header />
 			<ProductCard {...product} />
 			<MoreProducts />
-			<ProductListContainer
-				// cartCounter={cartCounter}
-				// setCartCounter={setCartCounter}
-				slider={true}
-			/>
+			<ProductListContainer slider={true} />
 		</div>
 	);
 };

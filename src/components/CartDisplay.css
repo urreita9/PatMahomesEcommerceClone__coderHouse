@@ -1,0 +1,67 @@
+@font-face {
+	src: url(../assets/F37JudgeTest-BoldCondensed.otf);
+	font-family: patMahomesBold;
+}
+.no__cart__display {
+	display: none;
+}
+.cart__display__container {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 50vw;
+	background-color: #e90000;
+	opacity: 1;
+	z-index: 100000;
+}
+.cart__display__margin {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 20px;
+}
+.cart__display__header {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 15px;
+	border-bottom: 1px solid white;
+}
+.cart__display__header__title {
+	font-family: patMahomesBold;
+	font-size: 6rem;
+}
+.cart__display__p {
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+.cart__display__clearIcon {
+	margin-top: 20px;
+}
+/* .cart__display__btn__container {
+	background-color: teal;
+} */
+.cart__display__body {
+	overflow-y: scroll;
+}
+
+.cart__display__btn {
+	border: 1px solid white;
+	font-size: 1.5rem;
+	color: white;
+}
+.cart__display__footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.9rem;
+	font-weight: 500;
+}
+
+@media (max-width: 799px) {
+	.cart__display__container {
+		left: 0;
+		width: 100vw;
+	}
+}

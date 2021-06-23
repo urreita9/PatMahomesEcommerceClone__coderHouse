@@ -16,7 +16,7 @@ const BodyTop = () => {
 				}
 				alt='PatMahomes_backgroundImage'
 			/>
-			<h1 className='body__topContainer__title'>
+			<h1 className='body__topContainer__title animate__animated animate__fadeIn'>
 				<span>PATRICK</span> MAHOMES II
 			</h1>
 

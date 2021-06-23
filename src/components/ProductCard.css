@@ -13,9 +13,10 @@
 	display: flex;
 }
 .productCard__image {
-	max-width: 50%;
+	/* max-width: 50%; */
 	margin: 0 auto;
 	background-color: black;
+	flex-basis: 200%;
 }
 .productCard__image__img {
 	background-color: white;
@@ -68,4 +69,16 @@
 	font-family: patMahomesBold;
 	font-size: 4vw;
 	text-align: center;
+}
+
+@media (max-width: 800px) {
+	.productCard__card__container {
+		flex-direction: column;
+	}
+
+	.productCard__image__img {
+		background-color: white;
+		max-width: 90vw;
+		/* max-height: 100%; */
+	}
 }

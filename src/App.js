@@ -17,12 +17,18 @@ function App() {
 
 	// const [cartCounter, setCartCounter] = useState(0);
 	const [cartCounter, setCartCounter] = useState(0);
+	const [productsAddedToCart, setProductsAddedToCart] = useState([]);
+	const [openCart, setOpenCart] = useState(false);
 
 	return (
 		<CartContext.Provider
 			value={{
 				cartCounter,
 				setCartCounter,
+				openCart,
+				setOpenCart,
+				productsAddedToCart,
+				setProductsAddedToCart,
 			}}
 		>
 			<AppRouter />

@@ -4,31 +4,22 @@ import RemoveIcon from "@material-ui/icons/Remove";
 import "./SumAndSubstractFromCart.css";
 import { CartContext } from "./CartContext";
 
-const SumAndSubstractFromCart = ({ stock }) => {
-	const [thisProductAmount, setThisProductAmount] = useState(0);
+const SumAndSubstractFromCart = ({
+	id,
+	stock,
+	onClickAddToCart,
+	onClickRemoveFromCart,
+	amountAdded,
+}) => {
 	const [outOfStock, setOutOfStock] = useState(false);
-	const { cartCounter, setCartCounter } = useContext(CartContext);
-
+	const { productsAddedToCart } = useContext(CartContext);
 	return (
 		<div className='buttons__container'>
+			<span> {amountAdded}</span>
 			<button
-				onClick={() => {
-					if (thisProductAmount > 0) {
-						setOutOfStock(false);
-						setThisProductAmount(thisProductAmount - 1);
-						setCartCounter(cartCounter - 1);
-					}
-				}}
-			>
-				<RemoveIcon fontSize='small' />
-			</button>
-			<span> {thisProductAmount}</span>
-			<button
-				onClick={() => {
-					if (thisProductAmount <= stock) {
-						setOutOfStock(false);
-						setThisProductAmount(thisProductAmount + 1);
-						setCartCounter(cartCounter + 1);
+				onClick={(id) => {
+					if (amountAdded <= stock) {
+						onClickAddToCart(id);
 					} else {
 						setOutOfStock(true);
 					}
@@ -36,6 +27,14 @@ const SumAndSubstractFromCart = ({ stock }) => {
 			>
 				<AddIcon fontSize='small' />
 			</button>
+			<button
+				onClick={(id) => {
+					onClickRemoveFromCart(id);
+				}}
+			>
+				<RemoveIcon fontSize='small' />
+			</button>
+			{console.log(id)}
 			{outOfStock ? <span>Out of Stock. More coming soon!</span> : null}
 		</div>
 	);

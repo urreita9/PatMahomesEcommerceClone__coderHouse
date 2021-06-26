@@ -20,7 +20,6 @@ export const Header = () => {
 		setScreenWidth(window.innerWidth);
 		screenWidth > 799 ? setMobile(false) : setMobile(true);
 	}, [screenWidth]);
-	console.log(screenWidth);
 	return (
 		<>
 			{screenWidth > 799 ? (

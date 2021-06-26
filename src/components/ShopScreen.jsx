@@ -7,7 +7,7 @@ const ShopScreen = () => {
 	return (
 		<div>
 			<Header />
-			<h1>ShopScreen</h1>
+			<h1>SHOP ALL PRODUCTS</h1>
 		</div>
 	);
 };

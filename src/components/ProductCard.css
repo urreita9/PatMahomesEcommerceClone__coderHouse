@@ -13,7 +13,7 @@
 	display: flex;
 }
 .productCard__image {
-	/* max-width: 50%; */
+	max-width: 50%;
 	margin: 0 auto;
 	background-color: black;
 	flex-basis: 200%;
@@ -54,7 +54,7 @@
 	display: flex;
 	flex-direction: column;
 }
-.productCard__info__bottomContainer button {
+.productCard__info__bottomContainer .productCard__info__addToCart {
 	font-family: patMahomesMedium;
 	font-size: 3vw;
 	cursor: pointer;

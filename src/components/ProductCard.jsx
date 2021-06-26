@@ -1,11 +1,11 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { CartContext } from "./CartContext";
 import CartDisplay from "./CartDisplay";
 import "./ProductCard.css";
 
 const ProductCard = ({ id, title, img, price, stock, description }) => {
-	const [stockDecrement, setStockDecrement] = useState(0);
 	const [outOfStock, setOutOfStock] = useState(false);
+	const [cartTotal, setCartTotal] = useState(0);
 	const {
 		cartCounter,
 		setCartCounter,
@@ -15,61 +15,81 @@ const ProductCard = ({ id, title, img, price, stock, description }) => {
 		setProductsAddedToCart,
 	} = useContext(CartContext);
 
-	console.log(stockDecrement);
-	console.log(stock);
+	useEffect(() => {
+		multiplyPartial();
+	}, [productsAddedToCart]);
 
-	// In this function we have to see:
-	// 1) Is there any Stock? Is the Cart empty? Ok, add product to cart or else, theres no more stock
-	// 2) If it isn´t empty, then we have to verify if the product is already added to de cart.
-	// If it so, just add one more item of the same product without duplicating it. If it isn´t inside, then add it and deploy it.
-	// 3) Then, there´s no more stock.
-	const addToCart = () => {
-		if (
-			stockDecrement <= stock &&
-			stock !== 0 &&
-			productsAddedToCart.length === 0
-		) {
-			setCartCounter(cartCounter + 1);
-			setStockDecrement(stockDecrement + 1);
-			setProductsAddedToCart((products) => [
-				...products,
-				{
-					id,
-					title,
-					img,
-					price,
-				},
-			]);
-			setOpenCart(true);
-			console.log("hola");
-		} else if (
-			stockDecrement <= stock &&
-			stock !== 0 &&
-			productsAddedToCart.length > 0
-		) {
-			const alreadyOnCart = productsAddedToCart.filter(
-				(product) => product.id === id
-			);
-			if (alreadyOnCart.length > 0) {
+	const multiplyPartial = () => {
+		const partials = productsAddedToCart.map(
+			(element) => element.price * element.amountAdded
+		);
+		setCartTotal(
+			partials.reduce((a, b) => {
+				return a + b;
+			}, 0)
+		);
+	};
+
+	const addToCart = (id) => {
+		const existInCart = productsAddedToCart.find(
+			(product) => product.id === id
+		);
+		if (stock > 0) {
+			if (existInCart) {
+				setProductsAddedToCart(
+					productsAddedToCart.map((product) =>
+						product.id === id
+							? {
+									...existInCart,
+									amountAdded: existInCart.amountAdded + 1,
+									// cartPartial: existInCart.amountAdded * existInCart.price,
+							  }
+							: product
+					)
+				);
 				setCartCounter(cartCounter + 1);
-				setStockDecrement(stockDecrement + 1);
 				setOpenCart(true);
 			} else {
-				setCartCounter(cartCounter + 1);
-				setStockDecrement(stockDecrement + 1);
-				setProductsAddedToCart((products) => [
-					...products,
+				setProductsAddedToCart([
+					...productsAddedToCart,
 					{
 						id,
 						title,
 						img,
 						price,
+						stock,
+						// cartPartial: price,
+						amountAdded: 1,
 					},
 				]);
+				setCartCounter(cartCounter + 1);
 				setOpenCart(true);
 			}
 		} else {
 			setOutOfStock(true);
+		}
+	};
+
+	const removeFromCart = (id) => {
+		const existInCart = productsAddedToCart.find(
+			(product) => product.id === id
+		);
+		if (existInCart.amountAdded === 1) {
+			setProductsAddedToCart(
+				productsAddedToCart.filter((product) => product.id !== id)
+			);
+			setCartCounter(cartCounter - 1);
+			// setOutOfStock(false);
+		} else {
+			setProductsAddedToCart(
+				productsAddedToCart.map((product) =>
+					product.id === id
+						? { ...existInCart, amountAdded: existInCart.amountAdded - 1 }
+						: product
+				)
+			);
+			// setOutOfStock(false);
+			setCartCounter(cartCounter - 1);
 		}
 	};
 
@@ -92,10 +112,21 @@ const ProductCard = ({ id, title, img, price, stock, description }) => {
 					</div>
 				</div>
 				<div className='productCard__info__bottomContainer'>
-					<button className='productCard__info__addToCart' onClick={addToCart}>
+					<button
+						className='productCard__info__addToCart'
+						onClick={() => addToCart(id)}
+					>
 						ADD TO CART
 					</button>
-					{openCart ? <CartDisplay /> : null}
+					{openCart ? (
+						<CartDisplay
+							// outOfStock={outOfStock}
+							// setOutOfStock={setOutOfStock}
+							cartTotal={cartTotal}
+							onClickAddToCart={addToCart}
+							onClickRemoveFromCart={removeFromCart}
+						/>
+					) : null}
 					{outOfStock && (
 						<span style={{ color: "#fcee21" }}>
 							No stock available. More coming soon!!!

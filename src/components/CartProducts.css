@@ -1,3 +1,7 @@
+@font-face {
+	src: url(../assets/F37JudgeTest-RegularCondensed.otf);
+	font-family: patMahomesRegular;
+}
 .cartProducts__container {
 	display: flex;
 	justify-content: space-between;
@@ -5,9 +9,7 @@
 	border-bottom: 1px solid white;
 	padding-top: 20px;
 	padding-bottom: 20px;
-
-	position: relative;
-	top: 0;
+	align-self: flex-start;
 }
 .cartProducts__container__image__container {
 	/* max-width: 30%; */
@@ -19,9 +21,32 @@
 	max-width: 100%;
 	background-color: white;
 }
-.cartProducts__counter {
+.cartProducts__container__ImageTitle {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.cartProducts__titlePrice__container {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	align-items: flex-start;
+	font-size: 1.2rem;
+	font-family: patMahomesRegular;
+}
+
+.cartProducts__counter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
+}
+
+.cart__display__footer__totalPrice__container {
+	font-family: patMahomesRegular;
+	font-size: 2rem;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
 }

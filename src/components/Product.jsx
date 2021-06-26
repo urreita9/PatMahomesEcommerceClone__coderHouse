@@ -23,7 +23,6 @@ const Product = ({
 					{title}
 					<span> $ {price}</span>
 				</p>
-				<SumAndSubstractFromCart stock={stock} />
 			</div>
 		</div>
 	);

@@ -15,11 +15,12 @@
 .product__info {
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: center;
 }
 .product__info > p {
 	color: white;
 	font-family: patMahomesRegular;
+	font-size: 2vw;
 }
 
 .product__info > p > span {
@@ -40,4 +41,21 @@
 	grid-row-end: 4;
 	grid-column-end: 5;
 }
-/* .product:first-child */
+
+@media (max-width: 799px) {
+	.product__info > p {
+		font-size: 4vw;
+	}
+	.productInGrid:first-child {
+		grid-row-start: 1;
+		grid-column-start: 1;
+		grid-row-end: 3;
+		grid-column-end: 3;
+	}
+	.productInGrid:last-child {
+		grid-row-start: 5;
+		grid-column-start: 1;
+		grid-row-end: 7;
+		grid-column-end: 3;
+	}
+}

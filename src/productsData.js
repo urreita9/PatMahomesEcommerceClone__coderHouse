@@ -29,7 +29,7 @@ export const productsFromFile = [
 	{
 		id: 4,
 		title: "THE PATRICK HAT",
-		img: "/images/PM-Beanie-1b.png",
+		img: "/images/PM-Showtime-Hat.png",
 		price: 30,
 		stock: 6,
 		description:
@@ -40,7 +40,7 @@ export const productsFromFile = [
 		title: "COMEBACK KINGDOM MASK",
 		img: "/images/PM-Comeback-Kingdom-Mask.png",
 		price: 15,
-		stock: 0,
+		stock: 1,
 		description:
 			"Stay as protected as 2PM in the pocket with the signature COMEBACK KINGDOM MASK.",
 	},
@@ -76,7 +76,7 @@ export const productsFromFile = [
 	{
 		id: 9,
 		title: "MAHOMES POM BEANIE",
-		img: "/images/PM-Repeater-Tee-Front.png",
+		img: "/images/PM-Beanie-2_Mockup.png",
 
 		price: 25,
 		stock: 2,
@@ -86,7 +86,7 @@ export const productsFromFile = [
 	{
 		id: 10,
 		title: "CLASSIC MAHOMES KNIT HAT",
-		img: "/images/PM-Repeater-Tee-Front.png",
+		img: "/images/PM-Beanie-1b.png",
 
 		price: 25,
 		stock: 1,

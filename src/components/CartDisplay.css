@@ -62,7 +62,8 @@
 }
 
 .cart__display__btn a {
-	font-family: patMahomesMedium;
+	text-decoration: none;
+	font-family: patMahomesBold;
 }
 .cart__display__footer {
 	display: flex;

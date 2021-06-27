@@ -1,0 +1,22 @@
+@font-face {
+	src: url(../assets/F37JudgeTest-BoldCondensed.otf);
+	font-family: patMahomesBold;
+}
+.footer__container {
+	width: 90vw;
+	margin: 60px auto 0 auto;
+	display: flex;
+}
+.footer__container__info {
+	width: 50%;
+}
+.footer__container__info__title {
+	font-family: patMahomesBold;
+	font-size: 15vw;
+	letter-spacing: -0.01em;
+	line-height: 0.85;
+	margin-top: 80px;
+}
+.footer__container__image {
+	margin-right: 20px;
+}

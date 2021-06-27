@@ -10,16 +10,19 @@
 .shopAll__Title {
 	margin-top: 40px;
 	margin-bottom: 40px;
-	font-family: patMahomesBold;
-	color: white;
-	font-size: 15.2vw;
+
 	text-align: center;
 }
-.shopAll__Title:hover {
+.shopAll__Title a:hover {
 	color: yellow;
 	cursor: pointer;
 }
-
+.shopAll__Title a {
+	text-decoration: none;
+	font-family: patMahomesBold;
+	color: white;
+	font-size: 15.2vw;
+}
 /* 2ND BackGround Image */
 .shopAll__image__container {
 	max-width: 100%;

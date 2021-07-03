@@ -1,7 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import ClearIcon from "@material-ui/icons/Clear";
+import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+
 import "./CartDisplay.css";
 import { CartContext } from "./CartContext";
 import CartProduct from "./CartPoduct";
@@ -49,6 +51,7 @@ const CartDisplay = ({
 								// setOutOfStock={setOutOfStock}
 								onClickAddToCart={onClickAddToCart}
 								onClickRemoveFromCart={onClickRemoveFromCart}
+								key={productAdded.id}
 							/>
 						))}
 						{console.log(productsAddedToCart)}
@@ -57,9 +60,10 @@ const CartDisplay = ({
 				<div className='cart__display__footer__container'>
 					{productsAddedToCart.length > 0 ? (
 						<div className='cart__display__footer__totalPrice__container'>
-							<span>TOTAL :</span>
-							<span>
-								$ <strong>{cartTotal}</strong>
+							<span>TOTAL</span>
+							<span className='totalPrice'>
+								<AttachMoneyIcon fontSize='inherit' />{" "}
+								<strong>{cartTotal}</strong>
 							</span>
 						</div>
 					) : null}

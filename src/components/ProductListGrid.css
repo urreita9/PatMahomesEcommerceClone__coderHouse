@@ -1,5 +1,6 @@
 .body__productGrid {
-	width: 90vw;
+	max-width: 90vw;
+
 	margin: 0 auto;
 	display: grid;
 	grid-column-gap: 2.431vw;
@@ -7,10 +8,18 @@
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 }
+.heightSkeleton {
+	height: 70vw;
+	max-height: 90vw;
+}
 
 @media (max-width: 799px) {
 	.body__productGrid {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(6, 1fr);
+	}
+	.heightSkeleton {
+		height: 130vw;
+		max-height: 130vw;
 	}
 }

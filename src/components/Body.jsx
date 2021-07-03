@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import ProductListContainer from "./ProductListContainer";
 import Marquee from "./Marquee";
 import BodyTop from "./BodyTop";
 import ShopAllSection from "./ShopAllSection";
 import MahomiesSection from "./MahomiesSection";
 import "./Body.css";
+import { CartContext } from "./CartContext";
 
 // import Product from "./Product";
 // import { products } from "../productsData";
@@ -14,9 +15,10 @@ import "./Body.css";
 // Componente muy largo >>> Hacer una mayor división.
 
 const Body = () => {
+	const { openCart } = useContext(CartContext);
 	return (
-		<div className='layout'>
-			<div className='body'>
+		<div className={`layout  ${openCart && "fixed"}`}>
+			<div className={`body`}>
 				<BodyTop />
 				{/* PRODUCT GRID */}
 				<ProductListContainer slider={false} />

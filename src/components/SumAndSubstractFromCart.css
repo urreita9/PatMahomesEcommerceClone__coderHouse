@@ -21,3 +21,8 @@ button {
 	background-color: transparent;
 	color: white;
 }
+/* @media (max-width: 799px) {
+	span {
+		font-size: 4vw;
+	}
+} */

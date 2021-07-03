@@ -1,10 +1,10 @@
 import React, { useState, useContext, useEffect } from "react";
 import { CartContext } from "./CartContext";
 import CartDisplay from "./CartDisplay";
+import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import "./ProductCard.css";
 
 const ProductCard = ({ id, title, img, price, stock, description }) => {
-	const [outOfStock, setOutOfStock] = useState(false);
 	const [cartTotal, setCartTotal] = useState(0);
 	const {
 		cartCounter,
@@ -13,6 +13,8 @@ const ProductCard = ({ id, title, img, price, stock, description }) => {
 		openCart,
 		productsAddedToCart,
 		setProductsAddedToCart,
+		outOfStock,
+		setOutOfStock,
 	} = useContext(CartContext);
 
 	useEffect(() => {
@@ -107,7 +109,7 @@ const ProductCard = ({ id, title, img, price, stock, description }) => {
 					</div>
 					<div className='productCard__info__topContainer__price'>
 						<span className='productCard__info__topContainer__title__span'>
-							$ {price}
+							<AttachMoneyIcon fontSize='inherit' /> {price}
 						</span>
 					</div>
 				</div>

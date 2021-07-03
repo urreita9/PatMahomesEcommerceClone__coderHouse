@@ -35,6 +35,11 @@
 	font-size: 1.2rem;
 	font-family: patMahomesRegular;
 }
+.title__price {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 
 .cartProducts__counter {
 	display: flex;
@@ -49,4 +54,10 @@
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 30px;
+}
+
+@media (max-width: 799px) {
+	.cartProducts__container {
+		font-size: 4vw;
+	}
 }

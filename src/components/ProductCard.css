@@ -14,7 +14,7 @@
 }
 .productCard__image {
 	max-width: 50%;
-	margin: 0 auto;
+	/* margin: 0 auto; */
 	background-color: black;
 	flex-basis: 200%;
 }
@@ -50,6 +50,11 @@
 .productCard__info__topContainer__price span {
 	color: #fcee21;
 }
+.productCard__info__topContainer__title__span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .productCard__info__bottomContainer {
 	display: flex;
 	flex-direction: column;
@@ -80,5 +85,11 @@
 		background-color: white;
 		max-width: 90vw;
 		/* max-height: 100%; */
+	}
+	.productCard__info__bottomContainer .productCard__info__addToCart {
+		font-size: 6vw;
+	}
+	.more__products {
+		font-size: 12vw;
 	}
 }

@@ -7,3 +7,9 @@
 body::-webkit-scrollbar {
 	display: none;
 }
+
+@media (max-width: 799px) {
+	body {
+		overflow-x: hidden;
+	}
+}

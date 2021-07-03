@@ -19,6 +19,8 @@ function App() {
 	const [cartCounter, setCartCounter] = useState(0);
 	const [productsAddedToCart, setProductsAddedToCart] = useState([]);
 	const [openCart, setOpenCart] = useState(false);
+	const [products, setProducts] = useState([]);
+	const [outOfStock, setOutOfStock] = useState(false);
 
 	return (
 		<CartContext.Provider
@@ -29,6 +31,10 @@ function App() {
 				setOpenCart,
 				productsAddedToCart,
 				setProductsAddedToCart,
+				products,
+				setProducts,
+				outOfStock,
+				setOutOfStock,
 			}}
 		>
 			<AppRouter />

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 // import SumAndSubstractFromCart from "./SumAndSubstractFromCart";
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
+import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+
 import "./SumAndSubstractFromCart.css";
 import "./CartProducts.css";
 
@@ -29,8 +31,8 @@ const CartPoduct = ({
 				</div>
 				<div className='cartProducts__titlePrice__container'>
 					<h2>{title}</h2>
-					<p>
-						$ <span>{price}</span>
+					<p className='title__price'>
+						<AttachMoneyIcon fontSize='inherit' /> <span>{price}</span>
 					</p>
 				</div>
 			</div>

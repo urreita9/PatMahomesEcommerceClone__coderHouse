@@ -21,13 +21,30 @@
 	color: white;
 	font-family: patMahomesRegular;
 	font-size: 2vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .product__info > p > span {
 	color: yellow;
 	font-family: patMahomesRegular;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-
+.skeletonInGrid {
+	width: 100%;
+	height: 100%;
+}
+.skeleton__image {
+	background-color: grey;
+	width: 100%;
+	height: 300%;
+}
+.skeleton__text {
+	background-color: grey;
+}
 /* Grid location of first and last child */
 .productInGrid:first-child {
 	grid-row-start: 1;
@@ -41,6 +58,8 @@
 	grid-row-end: 4;
 	grid-column-end: 5;
 }
+
+/* SKELETON */
 
 @media (max-width: 799px) {
 	.product__info > p {

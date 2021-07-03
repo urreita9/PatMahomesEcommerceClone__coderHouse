@@ -1,27 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import "./Product.css";
-import SumAndSubstractFromCart from "./SumAndSubstractFromCart";
+import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 
-const Product = ({
-	id,
-	displayProduct,
-	title,
-	price,
-	img,
-	description,
-	stock,
-	slider,
-}) => {
+import "./Product.css";
+import { CartContext } from "./CartContext";
+
+const Product = ({ id, displayProduct, title, price, img, imageLoaded }) => {
+	const { setOutOfStock } = useContext(CartContext);
 	return (
 		<div className={displayProduct}>
 			<Link to={`/product/${id}`}>
-				<img className='product__image' src={img} alt='productImage' />
+				<img
+					className='product__image'
+					src={img}
+					alt='productImage'
+					onClick={() => setOutOfStock(false)}
+				/>
 			</Link>
+
 			<div className='product__info'>
 				<p>
 					{title}
-					<span> $ {price}</span>
+					<span>
+						<AttachMoneyIcon fontSize='inherit' /> {price}
+					</span>
 				</p>
 			</div>
 		</div>

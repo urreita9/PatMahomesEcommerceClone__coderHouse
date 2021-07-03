@@ -1,18 +1,36 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import ProductList from "./ProductList";
 import { getData } from "../helpers/getData";
+import { CartContext } from "./CartContext";
 // import { productsFromFile } from "../productsData";
 
 const ProductListContainer = ({ slider }) => {
-	const [products, setProducts] = useState([]);
+	const [imageLoaded, setImageLoaded] = useState(false);
+	const { products, setProducts } = useContext(CartContext);
 	useEffect(() => {
-		getData().then((data) => setProducts(data));
+		if (products.length > 0) {
+			setImageLoaded(true);
+
+			return;
+		} else {
+			setTimeout(() => {
+				getData().then((data) => {
+					setProducts(data);
+					setImageLoaded(true);
+				});
+			}, 4000);
+		}
 	}, []);
 	return (
 		<>
 			<ProductList
+				imageLoaded={imageLoaded}
 				products={products}
-				displayClassName={slider ? "slider__container" : "body__productGrid"}
+				displayClassName={
+					slider
+						? "slider__container"
+						: `body__productGrid ${imageLoaded || "heightSkeleton"}`
+				}
 				slider={slider}
 			/>
 		</>

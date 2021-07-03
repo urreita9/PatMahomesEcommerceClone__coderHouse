@@ -49,7 +49,7 @@
 .cart__display__body {
 	overflow-y: scroll;
 	border-top: 1px solid white;
-	max-height: 40%;
+	max-height: 240px;
 }
 
 .cart__display__btn {
@@ -65,6 +65,14 @@
 	text-decoration: none;
 	font-family: patMahomesBold;
 }
+.cart__display__btn a span {
+	font-size: 5vw;
+}
+.cart__display__footer__container {
+	position: absolute;
+	bottom: 0;
+	width: 90%;
+}
 .cart__display__footer {
 	display: flex;
 	justify-content: space-between;
@@ -72,18 +80,32 @@
 	font-size: 0.9rem;
 	font-weight: 500;
 }
+.cart__display__footer__totalPrice__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 .link {
 	text-decoration: none;
 	color: white;
 	padding: 10px;
 }
+.totalPrice {
+	display: flex;
+	align-items: center;
+}
 
 @media (max-width: 799px) {
 	.cart__display__container {
 		left: 0;
+		right: 0;
 		width: 100vw;
+		overflow-x: hidden;
 	}
 	.cart__display__btn {
+		font-size: 6vw;
+	}
+	.cart__display__btn a span {
 		font-size: 6vw;
 	}
 }

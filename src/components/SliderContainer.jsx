@@ -1,5 +1,6 @@
 import React from "react";
 import Product from "./Product";
+import ProductSkeleton from "./PoductSkeleton";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/swiper.min.css";
@@ -12,7 +13,7 @@ import SwiperCore, { Pagination, Navigation } from "swiper/core";
 
 SwiperCore.use([Pagination, Navigation]);
 
-export default function SliderContainer({ products }) {
+export default function SliderContainer({ products, imageLoaded }) {
 	return (
 		<div className='slider'>
 			<Swiper
@@ -27,13 +28,21 @@ export default function SliderContainer({ products }) {
 				navigation={true}
 				className='mySwiper'
 			>
-				{products.map((product, index) => {
-					return (
-						<SwiperSlide key={index}>
-							<Product {...product} />
-						</SwiperSlide>
-					);
-				})}
+				{imageLoaded
+					? products.map((product, index) => {
+							return (
+								<SwiperSlide key={index}>
+									<Product {...product} imageLoaded={imageLoaded} />
+								</SwiperSlide>
+							);
+					  })
+					: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => {
+							return (
+								<SwiperSlide key={key}>
+									<ProductSkeleton key={key} displayProduct='productInGrid' />
+								</SwiperSlide>
+							);
+					  })}
 			</Swiper>
 		</div>
 	);

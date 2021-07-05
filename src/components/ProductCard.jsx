@@ -20,6 +20,9 @@ const ProductCard = ({ id, title, img, price, stock, description }) => {
 	useEffect(() => {
 		multiplyPartial();
 	}, [productsAddedToCart]);
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	const multiplyPartial = () => {
 		const partials = productsAddedToCart.map(

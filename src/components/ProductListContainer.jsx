@@ -13,12 +13,10 @@ const ProductListContainer = ({ slider }) => {
 
 			return;
 		} else {
-			setTimeout(() => {
-				getData().then((data) => {
-					setProducts(data);
-					setImageLoaded(true);
-				});
-			}, 4000);
+			getData().then((data) => {
+				setProducts(data);
+				setImageLoaded(true);
+			});
 		}
 	}, []);
 	return (

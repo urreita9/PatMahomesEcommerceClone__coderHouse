@@ -78,7 +78,9 @@ const CartDisplay = ({
 							}}
 						>
 							{productsAddedToCart.length > 0 ? (
-								"CHECKOUT"
+								<Link to='/cart'>
+									<span>CHECKOUT</span>
+								</Link>
 							) : (
 								<Link to='/all'>
 									<span>GO SHOPPING</span>

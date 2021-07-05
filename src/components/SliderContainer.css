@@ -38,3 +38,8 @@
 	height: 70%;
 	object-fit: cover;
 }
+@media (min-width: 1600px) {
+	.slider {
+		margin: 100px auto;
+	}
+}

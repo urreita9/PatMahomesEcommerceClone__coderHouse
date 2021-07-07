@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { CartContext } from "./CartContext";
+import { CartContext } from "./context/CartContext";
 import CartDisplay from "./CartDisplay";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import "./ProductCard.css";

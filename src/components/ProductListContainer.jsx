@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useState } from "react";
 import ProductList from "./ProductList";
 import { getData } from "../helpers/getData";
-import { CartContext } from "./CartContext";
+import { CartContext } from "./context/CartContext";
 // import { productsFromFile } from "../productsData";
 
 const ProductListContainer = ({ slider }) => {

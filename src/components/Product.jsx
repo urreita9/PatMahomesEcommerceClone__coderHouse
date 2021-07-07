@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 
 import "./Product.css";
-import { CartContext } from "./CartContext";
+import { CartContext } from "./context/CartContext";
 
 const Product = ({ id, displayProduct, title, price, img, imageLoaded }) => {
 	const { setOutOfStock } = useContext(CartContext);

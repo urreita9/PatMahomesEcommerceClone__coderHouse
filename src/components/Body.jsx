@@ -5,7 +5,7 @@ import BodyTop from "./BodyTop";
 import ShopAllSection from "./ShopAllSection";
 import MahomiesSection from "./MahomiesSection";
 import "./Body.css";
-import { CartContext } from "./CartContext";
+import { CartContext } from "./context/CartContext";
 
 // import Product from "./Product";
 // import { products } from "../productsData";
@@ -15,9 +15,13 @@ import { CartContext } from "./CartContext";
 // Componente muy largo >>> Hacer una mayor división.
 
 const Body = () => {
-	const { openCart } = useContext(CartContext);
+	const { openCart, isMenuClicked } = useContext(CartContext);
 	return (
-		<div className={`layout  ${openCart && "fixed"}`}>
+		<div
+			className={`layout  ${openCart && "fixed"} ${
+				isMenuClicked ? "hide" : "show"
+			}`}
+		>
 			<div className={`body`}>
 				<BodyTop />
 				{/* PRODUCT GRID */}

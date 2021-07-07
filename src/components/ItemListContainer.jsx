@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "./context/CartContext";
 // import "./NavMobile.css";
 import "./Header.css";
 
-const ItemListContainer = ({ items, mobile, clearIcon, handleMenuClick }) => {
+const ItemListContainer = ({ mobile, clearIcon, handleMenuClick }) => {
+	const { setIsMenuClicked } = useContext(CartContext);
+
+	const hideMenuOnClick = () => {
+		setIsMenuClicked(false);
+	};
 	return (
 		<div className={mobile ? "navMobile" : "navBar__left"}>
 			<div onClick={handleMenuClick} className='menuIcon'>
@@ -13,7 +19,7 @@ const ItemListContainer = ({ items, mobile, clearIcon, handleMenuClick }) => {
 
 			<ul className={mobile ? "navMobile__list" : "navBar__left__menuItems"}>
 				{mobile && (
-					<li className='navMobile__list__item'>
+					<li className='navMobile__list__item' onClick={hideMenuOnClick}>
 						<Link to='/'>HOME</Link>
 					</li>
 				)}
@@ -21,6 +27,7 @@ const ItemListContainer = ({ items, mobile, clearIcon, handleMenuClick }) => {
 					className={
 						mobile ? "navMobile__list__item" : "navBar__left__menuItems__items"
 					}
+					onClick={hideMenuOnClick}
 				>
 					<Link to='/all'>SHOP</Link>
 				</li>
@@ -28,6 +35,7 @@ const ItemListContainer = ({ items, mobile, clearIcon, handleMenuClick }) => {
 					className={
 						mobile ? "navMobile__list__item" : "navBar__left__menuItems__items"
 					}
+					onClick={hideMenuOnClick}
 				>
 					<Link to='/about'>ABOUT</Link>
 				</li>
@@ -35,6 +43,7 @@ const ItemListContainer = ({ items, mobile, clearIcon, handleMenuClick }) => {
 					className={
 						mobile ? "navMobile__list__item" : "navBar__left__menuItems__items"
 					}
+					onClick={hideMenuOnClick}
 				>
 					<Link to='/faq'>FAQ</Link>
 				</li>

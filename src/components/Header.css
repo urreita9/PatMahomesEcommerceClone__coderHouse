@@ -16,6 +16,9 @@
 }
 
 /* navBar left */
+.navBar__left {
+	margin-left: 15px;
+}
 .navBar__left__menuItems {
 	list-style: none;
 	display: flex;

@@ -5,11 +5,16 @@ import MenuIcon from "@material-ui/icons/Menu";
 import ClearIcon from "@material-ui/icons/Clear";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import ItemListContainer from "./ItemListContainer";
-import { CartContext } from "./CartContext";
+import { CartContext } from "./context/CartContext";
 
 const NavBarMobile = ({ items, mobile }) => {
-	const [isMenuClicked, setIsMenuClicked] = useState(false);
-	const { cartCounter, setOpenCart, openCart } = useContext(CartContext);
+	const {
+		cartCounter,
+		setOpenCart,
+		openCart,
+		isMenuClicked,
+		setIsMenuClicked,
+	} = useContext(CartContext);
 
 	const handleMenuClick = () => {
 		setIsMenuClicked(!isMenuClicked);

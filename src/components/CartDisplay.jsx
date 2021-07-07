@@ -5,7 +5,7 @@ import ClearIcon from "@material-ui/icons/Clear";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 
 import "./CartDisplay.css";
-import { CartContext } from "./CartContext";
+import { CartContext } from "./context/CartContext";
 import CartProduct from "./CartPoduct";
 
 const CartDisplay = ({
@@ -82,7 +82,7 @@ const CartDisplay = ({
 									<span>CHECKOUT</span>
 								</Link>
 							) : (
-								<Link to='/all'>
+								<Link to='/all' onClick={handleCartClick}>
 									<span>GO SHOPPING</span>
 								</Link>
 							)}

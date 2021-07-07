@@ -5,20 +5,20 @@ import { CartContext } from "./context/CartContext";
 // import { productsFromFile } from "../productsData";
 
 const ProductListContainer = ({ slider }) => {
-	const [imageLoaded, setImageLoaded] = useState(false);
-	const { products, setProducts } = useContext(CartContext);
-	useEffect(() => {
-		if (products.length > 0) {
-			setImageLoaded(true);
+	// const [imageLoaded, setImageLoaded] = useState(false);
+	const { products, imageLoaded } = useContext(CartContext);
+	// useEffect(() => {
+	// 	if (products.length > 0) {
+	// 		setImageLoaded(true);
 
-			return;
-		} else {
-			getData().then((data) => {
-				setProducts(data);
-				setImageLoaded(true);
-			});
-		}
-	}, []);
+	// 		return;
+	// 	} else {
+	// 		getData().then((data) => {
+	// 			setProducts(data);
+	// 			setImageLoaded(true);
+	// 		});
+	// 	}
+	// }, []);
 	return (
 		<>
 			<ProductList

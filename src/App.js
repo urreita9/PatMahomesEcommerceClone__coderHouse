@@ -1,5 +1,4 @@
 import AppRouter from "./router/AppRouter";
-import { ContextProvider } from "./components/context/CartContext";
 
 import "./App.css";
 
@@ -12,11 +11,7 @@ function App() {
 	// Todavía no se muy bien como trabajar las imágenes y si los productos los tendremos que volcar en alguna BD.
 	// Circunstancialmente, sirve para avanzar.
 
-	return (
-		<ContextProvider>
-			<AppRouter />
-		</ContextProvider>
-	);
+	return <AppRouter />;
 }
 
 export default App;

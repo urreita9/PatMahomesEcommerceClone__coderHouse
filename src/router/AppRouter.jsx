@@ -1,4 +1,6 @@
 import React from "react";
+import { ContextProvider } from "../components/context/CartContext";
+
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -15,18 +17,20 @@ import ShopScreen from "../components/ShopScreen";
 
 const AppRouter = () => {
 	return (
-		<Router>
-			<Switch>
-				<Route exact path='/' component={HomeScreen} />
-				<Route exact path='/about' component={AboutScreen} />
-				<Route exact path='/all' component={ShopScreen} />
-				<Route exact path='/cart' component={CartScreen} />
-				<Route exact path='/product/:productId' component={ProductScreen} />
+		<ContextProvider>
+			<Router>
+				<Switch>
+					<Route exact path='/' component={HomeScreen} />
+					<Route exact path='/about' component={AboutScreen} />
+					<Route exact path='/all' component={ShopScreen} />
+					<Route exact path='/cart' component={CartScreen} />
+					<Route exact path='/product/:productId' component={ProductScreen} />
 
-				<Redirect to='/' />
-			</Switch>
-			<Footer />
-		</Router>
+					<Redirect to='/' />
+				</Switch>
+				<Footer />
+			</Router>
+		</ContextProvider>
 	);
 };
 

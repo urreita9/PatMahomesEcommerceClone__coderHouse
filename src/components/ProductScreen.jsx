@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router";
+import { CartContext } from "./context/CartContext";
 import Header from "./Header";
 import ProductCard from "./ProductCard";
 import ProductListContainer from "./ProductListContainer";
 import MoreProducts from "./MoreProducts";
-import { getData } from "../helpers/getData";
 
 const ProductScreen = () => {
 	const [product, setProduct] = useState({});
 	const { productId } = useParams();
+	const { products } = useContext(CartContext);
 	useEffect(() => {
-		getData().then((data) => {
-			setProduct(data.find((product) => product.id === parseInt(productId)));
-		});
+		setProduct(products.find((product) => product.id === parseInt(productId)));
 	}, [productId]);
 	return (
 		<div>

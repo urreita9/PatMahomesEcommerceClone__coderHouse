@@ -71,6 +71,7 @@
 .cart__display__footer__container {
 	position: absolute;
 	bottom: 0;
+	left: 5%;
 	width: 90%;
 }
 .cart__display__footer {

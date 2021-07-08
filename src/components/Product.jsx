@@ -5,8 +5,9 @@ import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import "./Product.css";
 import { CartContext } from "./context/CartContext";
 
-const Product = ({ id, displayProduct, title, price, img, imageLoaded }) => {
-	const { setOutOfStock } = useContext(CartContext);
+const Product = ({ id, displayProduct, title, price, img }) => {
+	const { setOutOfStock, imageLoaded, setImageLoaded } =
+		useContext(CartContext);
 	return (
 		<div className={displayProduct}>
 			<Link to={`/product/${id}`}>
@@ -15,6 +16,10 @@ const Product = ({ id, displayProduct, title, price, img, imageLoaded }) => {
 					src={img}
 					alt='productImage'
 					onClick={() => setOutOfStock(false)}
+					onLoad={() => {
+						setImageLoaded(true);
+					}}
+					style={{ visibility: imageLoaded ? "visible" : "hidden" }}
 				/>
 			</Link>
 

@@ -5,24 +5,12 @@ import { CartContext } from "./context/CartContext";
 // import { productsFromFile } from "../productsData";
 
 const ProductListContainer = ({ slider }) => {
-	// const [imageLoaded, setImageLoaded] = useState(false);
-	const { products, imageLoaded } = useContext(CartContext);
-	// useEffect(() => {
-	// 	if (products.length > 0) {
-	// 		setImageLoaded(true);
+	const { products, imageLoaded, loading } = useContext(CartContext);
 
-	// 		return;
-	// 	} else {
-	// 		getData().then((data) => {
-	// 			setProducts(data);
-	// 			setImageLoaded(true);
-	// 		});
-	// 	}
-	// }, []);
 	return (
 		<>
 			<ProductList
-				imageLoaded={imageLoaded}
+				loading={loading}
 				products={products}
 				displayClassName={
 					slider

@@ -13,7 +13,7 @@ import SwiperCore, { Pagination, Navigation } from "swiper/core";
 
 SwiperCore.use([Pagination, Navigation]);
 
-export default function SliderContainer({ products, imageLoaded }) {
+export default function SliderContainer({ products, loading }) {
 	return (
 		<div className='slider'>
 			<Swiper
@@ -28,11 +28,11 @@ export default function SliderContainer({ products, imageLoaded }) {
 				navigation={true}
 				className='mySwiper'
 			>
-				{imageLoaded
+				{loading
 					? products.map((product, index) => {
 							return (
 								<SwiperSlide key={index}>
-									<Product {...product} imageLoaded={imageLoaded} />
+									<Product {...product} />
 								</SwiperSlide>
 							);
 					  })

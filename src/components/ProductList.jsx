@@ -5,16 +5,15 @@ import ProductSkeleton from "./PoductSkeleton";
 import SliderContainer from "./SliderContainer";
 import "./ProductListGrid.css";
 
-const ProductList = ({ products, displayClassName, slider, imageLoaded }) => {
+const ProductList = ({ products, displayClassName, slider, loading }) => {
 	return (
 		<div className={displayClassName}>
 			{slider ? (
-				<SliderContainer products={products} imageLoaded={imageLoaded} />
-			) : imageLoaded ? (
+				<SliderContainer products={products} loading={loading} />
+			) : loading ? (
 				products.slice(0, 6).map((product) => {
 					return (
 						<Product
-							imageLoaded={imageLoaded}
 							displayProduct='productInGrid'
 							{...product}
 							key={product.id}

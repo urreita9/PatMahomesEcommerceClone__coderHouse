@@ -12,18 +12,13 @@ export const ContextProvider = ({ children }) => {
 	const [outOfStock, setOutOfStock] = useState(false);
 	const [isMenuClicked, setIsMenuClicked] = useState(false);
 	const [imageLoaded, setImageLoaded] = useState(false);
+	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
-		if (products.length > 0) {
-			setImageLoaded(true);
-
-			return;
-		} else {
-			getData().then((data) => {
-				setProducts(data);
-				setImageLoaded(true);
-			});
-		}
+		getData().then((data) => {
+			setProducts(data);
+			setLoading(true);
+		});
 	}, []);
 
 	const values = {
@@ -41,10 +36,8 @@ export const ContextProvider = ({ children }) => {
 		setIsMenuClicked,
 		imageLoaded,
 		setImageLoaded,
+		loading,
+		setLoading,
 	};
-	return (
-		<CartContext.Provider value={values}>
-			{imageLoaded ? children : <h4>Loading..</h4>}
-		</CartContext.Provider>
-	);
+	return <CartContext.Provider value={values}>{children}</CartContext.Provider>;
 };

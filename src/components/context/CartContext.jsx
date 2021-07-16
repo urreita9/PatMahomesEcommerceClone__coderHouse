@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 
 const productsRef = db.collection("products");
 const ordersRef = db.collection("orders");
+const contactRef = db.collection("contactEmails");
 
 export const CartContext = createContext();
 
@@ -54,8 +55,8 @@ export const ContextProvider = ({ children }) => {
 			Swal.fire({
 				icon: "success",
 				title: `Congratulations ${op.buyer.name}!`,
-				text: `Great purchase! Your items will be delivered to ${op.buyer.adress}.`,
-				footer: `Operation # ${response.id} - Please remember`,
+				text: `Great purchase! Your items will be delivered to: ${op.buyer.adress}.`,
+				footer: `Operation ID # ${response.id}`,
 			});
 		});
 	};
@@ -70,6 +71,11 @@ export const ContextProvider = ({ children }) => {
 		});
 	};
 
+	const createContactEmail = (email) => {
+		return contactRef
+			.add({ email: email, date: new Date().getTime() })
+			.then(({ id }) => console.log(id));
+	};
 	const handleCartClick = () => {
 		setOpenCart(!openCart);
 	};
@@ -177,6 +183,7 @@ export const ContextProvider = ({ children }) => {
 		removeFromCart,
 		createOrder,
 		updateStock,
+		createContactEmail,
 	};
 	return <CartContext.Provider value={values}>{children}</CartContext.Provider>;
 };

@@ -62,3 +62,23 @@ button {
 	justify-content: center;
 	color: yellow;
 }
+
+@media (max-width: 800px) {
+	.cartScreen__form {
+		width: 100%;
+		max-width: 900px;
+		font-size: 10vw;
+	}
+	.cartScreen__form label {
+		margin-top: 10px;
+	}
+	.cartScreen__form input {
+		height: 10vw;
+		font-size: 9vw;
+		font-family: patMahomesRegular;
+	}
+	.cartScreen__products {
+		max-width: 90vw;
+		font-size: 10vw;
+	}
+}

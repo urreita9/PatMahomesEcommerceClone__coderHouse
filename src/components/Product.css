@@ -64,7 +64,7 @@
 
 @media (max-width: 799px) {
 	.product__info > p {
-		font-size: 4vw;
+		font-size: 5vw;
 	}
 	.productInGrid:first-child {
 		grid-row-start: 1;

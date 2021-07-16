@@ -88,4 +88,12 @@
 	.buttons__container {
 		font-size: 4vw;
 	}
+	.checkout__image {
+		max-width: 20vw;
+	}
+	.cartProducts__checkout {
+		font-size: 5vw;
+		font-family: patMahomesRegular;
+		margin-left: 20px;
+	}
 }

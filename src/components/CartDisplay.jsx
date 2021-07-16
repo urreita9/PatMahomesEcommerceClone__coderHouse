@@ -17,7 +17,11 @@ const CartDisplay = ({
 
 	return (
 		<div
-			className={openCart ? "cart__display__container" : "no__cart__display"}
+			className={
+				openCart
+					? "cart__display__container animate__animated animate__fadeInRight"
+					: "no__cart__display"
+			}
 		>
 			<div className='cart__display__margin'>
 				<div>

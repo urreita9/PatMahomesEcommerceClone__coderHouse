@@ -3,6 +3,8 @@ import { Redirect } from "react-router-dom";
 import CartPoduct from "./CartPoduct";
 import { CartContext } from "./context/CartContext";
 import { useForm } from "../hooks/useForm";
+import validator from "validator";
+
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 
 import "./CartScreen.css";
@@ -42,7 +44,9 @@ const CartScreen = () => {
 
 	return (
 		<>
-			<h1 className='cartScreen__title'>CART CHECKOUT</h1>
+			<h1 className='cartScreen__title animate__animated animate__fadeIn'>
+				CART CHECKOUT
+			</h1>
 			<div className='cartScreen__container'>
 				{cartTotal > 0 ? (
 					<form onSubmit={(e) => handleSubmit(e)} className='cartScreen__form'>

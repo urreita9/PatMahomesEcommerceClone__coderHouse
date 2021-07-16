@@ -58,6 +58,9 @@
 	.navBar {
 		margin-top: 5%;
 	}
+	.navBar__left__menuItems__items a {
+		font-size: 5vw;
+	}
 }
 .navMobile {
 	height: 100vh;
@@ -84,6 +87,8 @@
 	text-decoration: none;
 	color: white;
 	font-family: patMahomesBold;
+	font-size: 40vw;
+	margin-left: 5px;
 }
 .navMobile__list__item a:hover {
 	color: yellow;

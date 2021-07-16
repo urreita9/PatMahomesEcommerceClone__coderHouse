@@ -1,18 +1,11 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import Product from "./Product";
 import ProductSkeleton from "./PoductSkeleton";
-import { getData } from "../helpers/getData";
-
+import { CartContext } from "./context/CartContext";
 import "./ShopGrid.css";
 
 const ShopGrid = () => {
-	const [imageLoaded, setImageLoaded] = useState(false);
-
-	const [products, setProducts] = useState([]);
-	useEffect(() => {
-		getData().then((data) => setProducts(data));
-		setImageLoaded(true);
-	}, []);
+	const { products, imageLoaded } = useContext(CartContext);
 	return (
 		<div className='shop__section__container'>
 			<h1 className='shop__section__title animate__animated animate__fadeIn'>

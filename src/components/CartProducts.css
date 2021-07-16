@@ -34,6 +34,16 @@
 	align-items: flex-start;
 	font-size: 1.2rem;
 	font-family: patMahomesRegular;
+	margin-left: 5px;
+}
+.cartProducts__checkout {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	font-size: 4vw;
+	font-family: patMahomesRegular;
+	margin-left: 5px;
 }
 .title__price {
 	display: flex;
@@ -55,9 +65,23 @@
 	justify-content: space-between;
 	margin-bottom: 30px;
 }
-
+.buttons__container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 3vw;
+	/* position: relative;
+	z-index: 10; */
+}
+.buttons__container button {
+	border: 0;
+	background-color: transparent;
+	color: white;
+}
 @media (max-width: 799px) {
-	.cartProducts__container {
+	.cartProducts__container,
+	.buttons__container {
 		font-size: 4vw;
 	}
 }

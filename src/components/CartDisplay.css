@@ -49,7 +49,7 @@
 .cart__display__body {
 	overflow-y: scroll;
 	border-top: 1px solid white;
-	max-height: 240px;
+	max-height: 150px;
 }
 
 .cart__display__btn {
@@ -64,6 +64,7 @@
 .cart__display__btn a {
 	text-decoration: none;
 	font-family: patMahomesBold;
+	color: white;
 }
 .cart__display__btn a span {
 	font-size: 5vw;

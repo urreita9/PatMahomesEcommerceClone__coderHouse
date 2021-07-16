@@ -1,12 +1,15 @@
 import React from "react";
 import Header from "./Header";
+import "./AboutScreen.css";
 
 const AboutScreen = () => {
 	return (
-		<div>
-			<Header />
-			<h1>About Screen</h1>
-		</div>
+		<>
+			<h1 className='about__title'>ABOUT</h1>
+			<div className='about__container'>
+				<Header />
+			</div>
+		</>
 	);
 };
 

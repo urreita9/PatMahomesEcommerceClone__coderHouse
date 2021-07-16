@@ -15,7 +15,10 @@ const Product = ({ id, displayProduct, title, price, img }) => {
 					className='product__image'
 					src={img}
 					alt='productImage'
-					onClick={() => setOutOfStock(false)}
+					onClick={() => {
+						setOutOfStock(false);
+						window.scrollTo(0, 0);
+					}}
 					onLoad={() => {
 						setImageLoaded(true);
 					}}

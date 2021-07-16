@@ -1,102 +1,23 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { CartContext } from "./context/CartContext";
 import CartDisplay from "./CartDisplay";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import "./ProductCard.css";
 
 const ProductCard = ({ id, title, img, price, stock, description }) => {
-	const [cartTotal, setCartTotal] = useState(0);
 	const {
-		cartCounter,
-		setCartCounter,
-		setOpenCart,
 		openCart,
 		productsAddedToCart,
-		setProductsAddedToCart,
 		outOfStock,
-		setOutOfStock,
+		cartTotal,
+		multiplyPartial,
+		addToCart,
+		removeFromCart,
 	} = useContext(CartContext);
 
 	useEffect(() => {
 		multiplyPartial();
 	}, [productsAddedToCart]);
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
-
-	const multiplyPartial = () => {
-		const partials = productsAddedToCart.map(
-			(element) => element.price * element.amountAdded
-		);
-		setCartTotal(
-			partials.reduce((a, b) => {
-				return a + b;
-			}, 0)
-		);
-	};
-
-	const addToCart = (id) => {
-		const existInCart = productsAddedToCart.find(
-			(product) => product.id === id
-		);
-		if (stock > 0) {
-			if (existInCart) {
-				setProductsAddedToCart(
-					productsAddedToCart.map((product) =>
-						product.id === id
-							? {
-									...existInCart,
-									amountAdded: existInCart.amountAdded + 1,
-									// cartPartial: existInCart.amountAdded * existInCart.price,
-							  }
-							: product
-					)
-				);
-				setCartCounter(cartCounter + 1);
-				setOpenCart(true);
-			} else {
-				setProductsAddedToCart([
-					...productsAddedToCart,
-					{
-						id,
-						title,
-						img,
-						price,
-						stock,
-						// cartPartial: price,
-						amountAdded: 1,
-					},
-				]);
-				setCartCounter(cartCounter + 1);
-				setOpenCart(true);
-			}
-		} else {
-			setOutOfStock(true);
-		}
-	};
-
-	const removeFromCart = (id) => {
-		const existInCart = productsAddedToCart.find(
-			(product) => product.id === id
-		);
-		if (existInCart.amountAdded === 1) {
-			setProductsAddedToCart(
-				productsAddedToCart.filter((product) => product.id !== id)
-			);
-			setCartCounter(cartCounter - 1);
-			// setOutOfStock(false);
-		} else {
-			setProductsAddedToCart(
-				productsAddedToCart.map((product) =>
-					product.id === id
-						? { ...existInCart, amountAdded: existInCart.amountAdded - 1 }
-						: product
-				)
-			);
-			// setOutOfStock(false);
-			setCartCounter(cartCounter - 1);
-		}
-	};
 
 	return (
 		<div className='productCard__card__container'>
@@ -119,14 +40,15 @@ const ProductCard = ({ id, title, img, price, stock, description }) => {
 					</div>
 					<div className='productCard__info__topContainer__price'>
 						<span className='productCard__info__topContainer__title__span'>
-							<AttachMoneyIcon fontSize='inherit' /> {price}
+							<AttachMoneyIcon fontSize='inherit' />
+							{price}
 						</span>
 					</div>
 				</div>
 				<div className='productCard__info__bottomContainer'>
 					<button
 						className='productCard__info__addToCart'
-						onClick={() => addToCart(id)}
+						onClick={() => addToCart(id, stock, title, img, price)}
 					>
 						ADD TO CART
 					</button>

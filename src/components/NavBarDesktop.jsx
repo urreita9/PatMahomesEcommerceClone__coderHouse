@@ -6,11 +6,7 @@ import ItemListContainer from "./ItemListContainer";
 import "./Header.css";
 
 const NavBar = ({ items, mobile }) => {
-	const { cartCounter, setOpenCart, openCart } = useContext(CartContext);
-
-	const handleCartClick = () => {
-		setOpenCart(true);
-	};
+	const { cartCounter, openCart, handleCartClick } = useContext(CartContext);
 
 	return (
 		<>

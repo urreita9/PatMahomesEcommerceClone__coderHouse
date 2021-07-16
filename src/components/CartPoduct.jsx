@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { CartContext } from "./context/CartContext";
 // import SumAndSubstractFromCart from "./SumAndSubstractFromCart";
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 
-import "./SumAndSubstractFromCart.css";
 import "./CartProducts.css";
 
 const CartPoduct = ({
@@ -14,11 +14,10 @@ const CartPoduct = ({
 	amountAdded,
 	stock,
 	price,
-	// setOutOfStock,
-	onClickAddToCart,
-	onClickRemoveFromCart,
+	checkout,
 }) => {
 	const [outOfStock, setOutOfStock] = useState(false);
+	const { addToCart, removeFromCart } = useContext(CartContext);
 	return (
 		<div className='cartProducts__container'>
 			<div className='cartProducts__container__ImageTitle'>
@@ -29,7 +28,13 @@ const CartPoduct = ({
 						className='cartProducts__container__image__container__image'
 					/>
 				</div>
-				<div className='cartProducts__titlePrice__container'>
+				<div
+					className={
+						checkout
+							? "cartProducts__checkout"
+							: "cartProducts__titlePrice__container"
+					}
+				>
 					<h2>{title}</h2>
 					<p className='title__price'>
 						<AttachMoneyIcon fontSize='inherit' /> <span>{price}</span>
@@ -46,21 +51,25 @@ const CartPoduct = ({
 			/> */}
 			<div className='buttons__container'>
 				<span> {amountAdded}</span>
+
 				<button
 					onClick={() =>
-						amountAdded < stock ? onClickAddToCart(id) : setOutOfStock(true)
+						amountAdded < stock
+							? addToCart(id, stock, title, img, price)
+							: setOutOfStock(true)
 					}
 				>
 					<AddIcon fontSize='small' />
 				</button>
 				<button
 					onClick={() => {
-						onClickRemoveFromCart(id);
+						removeFromCart(id);
 						setOutOfStock(false);
 					}}
 				>
 					<RemoveIcon fontSize='small' />
 				</button>
+
 				{outOfStock ? <span>Out of Stock. More coming soon!</span> : null}
 			</div>
 		</div>

@@ -6,20 +6,15 @@ import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 
 import "./CartDisplay.css";
 import { CartContext } from "./context/CartContext";
-import CartProduct from "./CartPoduct";
+import CartPoduct from "./CartPoduct";
 
 const CartDisplay = ({
-	onClickAddToCart,
-	onClickRemoveFromCart,
 	cartTotal,
 	// setOutOfStock,
 }) => {
-	const { setOpenCart, openCart, productsAddedToCart } =
+	const { openCart, productsAddedToCart, handleCartClick } =
 		useContext(CartContext);
-	const handleCartClick = () => {
-		setOpenCart(false);
-	};
-	console.log(productsAddedToCart);
+
 	return (
 		<div
 			className={openCart ? "cart__display__container" : "no__cart__display"}
@@ -44,13 +39,12 @@ const CartDisplay = ({
 					</div>
 					<div className='cart__display__body'>
 						{productsAddedToCart.map((productAdded) => (
-							<CartProduct
+							<CartPoduct
 								{...productAdded}
 								// hola={productAdded}
 								// outOfStock={outOfStock}
 								// setOutOfStock={setOutOfStock}
-								onClickAddToCart={onClickAddToCart}
-								onClickRemoveFromCart={onClickRemoveFromCart}
+
 								key={productAdded.id}
 							/>
 						))}

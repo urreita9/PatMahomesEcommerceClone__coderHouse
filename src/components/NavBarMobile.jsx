@@ -10,19 +10,12 @@ import { CartContext } from "./context/CartContext";
 const NavBarMobile = ({ items, mobile }) => {
 	const {
 		cartCounter,
-		setOpenCart,
 		openCart,
 		isMenuClicked,
-		setIsMenuClicked,
+		handleMenuClick,
+		handleCartClick,
 	} = useContext(CartContext);
 
-	const handleMenuClick = () => {
-		setIsMenuClicked(!isMenuClicked);
-	};
-
-	const handleCartClick = () => {
-		setOpenCart(true);
-	};
 	return (
 		<>
 			{openCart ? <CartDisplay /> : null}

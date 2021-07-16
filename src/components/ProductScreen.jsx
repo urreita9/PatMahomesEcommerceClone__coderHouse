@@ -11,7 +11,7 @@ const ProductScreen = () => {
 	const { productId } = useParams();
 	const { products } = useContext(CartContext);
 	useEffect(() => {
-		setProduct(products.find((product) => product.id === parseInt(productId)));
+		setProduct(products.find((product) => product.id === productId));
 	}, [productId]);
 	return (
 		<div>

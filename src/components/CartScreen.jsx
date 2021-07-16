@@ -90,35 +90,18 @@ const CartScreen = () => {
 						</button>
 					</form>
 				) : (
-					// <h2 className='shopAll__Title'>
-					// 	<Link to='/all'>SHOP ALL</Link>
-					// </h2>
 					<Redirect to='/all' />
 				)}
 
 				<div className='cartScreen__products total'>
 					{" "}
-					<span
-					// style={{
-					// 	display: "flex",
-					// 	flexDirection: "row",
-					// 	alignItems: "center",
-					// }}
-					>
-						TOTAL
-					</span>
+					<span>TOTAL</span>
 					<AttachMoneyIcon fontSize='inherit' />
 					<span> {cartTotal}</span>
 				</div>
 				<div className='cartScreen__products'>
 					{productsAddedToCart.map((product) => {
-						return (
-							// <div key={product.id}>
-							// 	<h5>{product.title}</h5>
-							// 	<img src={product.img} alt='' />
-							// </div>
-							<CartPoduct {...product} checkout={true} />
-						);
+						return <CartPoduct {...product} checkout={true} />;
 					})}
 				</div>
 			</div>

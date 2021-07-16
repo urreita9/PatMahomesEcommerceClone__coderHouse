@@ -21,6 +21,10 @@
 	max-width: 100%;
 	background-color: white;
 }
+.checkout__image {
+	max-width: 100%;
+	background-color: black;
+}
 .cartProducts__container__ImageTitle {
 	display: flex;
 	justify-content: left;

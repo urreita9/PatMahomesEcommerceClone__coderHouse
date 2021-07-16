@@ -25,7 +25,11 @@ const CartPoduct = ({
 					<img
 						src={img}
 						alt='product_image'
-						className='cartProducts__container__image__container__image'
+						className={
+							checkout
+								? "checkout__image"
+								: "cartProducts__container__image__container__image"
+						}
 					/>
 				</div>
 				<div

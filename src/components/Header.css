@@ -56,7 +56,7 @@
 
 @media (max-width: 800px) {
 	.navBar {
-		margin-top: 5%;
+		margin-top: 3%;
 	}
 	.navBar__left__menuItems__items a {
 		font-size: 5vw;

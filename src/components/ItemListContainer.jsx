@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "./context/CartContext";
-// import "./NavMobile.css";
 import "./Header.css";
 
-const ItemListContainer = ({ mobile, clearIcon, handleMenuClick }) => {
+const ItemListContainer = ({ mobile }) => {
 	const { hideMenuOnClick } = useContext(CartContext);
 
 	return (
@@ -15,11 +14,15 @@ const ItemListContainer = ({ mobile, clearIcon, handleMenuClick }) => {
 			</div> */}
 
 			<ul className={mobile ? "navMobile__list" : "navBar__left__menuItems"}>
-				{mobile && (
-					<li className='navMobile__list__item' onClick={hideMenuOnClick}>
-						<Link to='/'>HOME</Link>
-					</li>
-				)}
+				<li
+					className={
+						mobile ? "navMobile__list__item" : "navBar__left__menuItems__items"
+					}
+					onClick={hideMenuOnClick}
+				>
+					<Link to='/'>HOME</Link>
+				</li>
+
 				<li
 					className={
 						mobile ? "navMobile__list__item" : "navBar__left__menuItems__items"
@@ -36,14 +39,14 @@ const ItemListContainer = ({ mobile, clearIcon, handleMenuClick }) => {
 				>
 					<Link to='/about'>ABOUT</Link>
 				</li>
-				<li
+				{/* <li
 					className={
 						mobile ? "navMobile__list__item" : "navBar__left__menuItems__items"
 					}
 					onClick={hideMenuOnClick}
 				>
 					<Link to='/faq'>FAQ</Link>
-				</li>
+				</li> */}
 			</ul>
 		</div>
 	);

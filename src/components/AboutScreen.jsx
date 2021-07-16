@@ -11,7 +11,9 @@ const AboutScreen = () => {
 		<>
 			<div className='about__container'>
 				<Header />
-				<h1 className='about__title'>ABOUT ME</h1>
+				<h1 className='about__title animate__animated animate__fadeIn'>
+					ABOUT ME
+				</h1>
 				<div className='about__info__container'>
 					<p>
 						<span className='first__span'>My name: </span>
@@ -56,7 +58,7 @@ const AboutScreen = () => {
 					<p>
 						<span className='first__span'>PASSION: </span>
 						<span className='second__span'>
-							LEARNING NEW STUFF, ALL THE TIME
+							LEARNING NEW STUFF. ALL THE TIME
 						</span>
 					</p>
 				</div>

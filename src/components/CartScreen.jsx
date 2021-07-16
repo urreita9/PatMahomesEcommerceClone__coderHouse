@@ -1,5 +1,5 @@
-import React, { useState, useContext, useEffect } from "react";
-import { Link, Redirect } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { Redirect } from "react-router-dom";
 import CartPoduct from "./CartPoduct";
 import { CartContext } from "./context/CartContext";
 import { useForm } from "../hooks/useForm";
@@ -8,8 +8,13 @@ import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import "./CartScreen.css";
 
 const CartScreen = () => {
-	const [buyer, setBuyer] = useState({});
-	const { cartTotal } = useContext(CartContext);
+	const {
+		cartTotal,
+		productsAddedToCart,
+		multiplyPartial,
+		createOrder,
+		updateStock,
+	} = useContext(CartContext);
 	const [inputValues, handleInputChange, reset] = useForm({
 		name: "",
 		phone: "",
@@ -18,7 +23,7 @@ const CartScreen = () => {
 	});
 
 	const { name, phone, email, adress } = inputValues;
-	const { productsAddedToCart, multiplyPartial } = useContext(CartContext);
+
 	useEffect(() => {
 		multiplyPartial();
 	}, [productsAddedToCart]);
@@ -29,16 +34,12 @@ const CartScreen = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (name === "" || phone === "" || adress === "") return;
-		setBuyer({
-			name: name,
-			phone: phone,
-			email: email,
-			adress: adress,
-		});
 
+		createOrder(name, phone, email, adress, productsAddedToCart, cartTotal);
+		updateStock(productsAddedToCart);
 		reset();
 	};
-	console.log(buyer, productsAddedToCart);
+
 	return (
 		<>
 			<h1 className='cartScreen__title'>CART CHECKOUT</h1>
@@ -101,7 +102,7 @@ const CartScreen = () => {
 				</div>
 				<div className='cartScreen__products'>
 					{productsAddedToCart.map((product) => {
-						return <CartPoduct {...product} checkout={true} />;
+						return <CartPoduct {...product} checkout={true} key={product.id} />;
 					})}
 				</div>
 			</div>

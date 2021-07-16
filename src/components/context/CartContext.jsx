@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { createContext } from "react";
-// import { getData } from "../../helpers/getData";
 import db from "../../firebase/firebase-config";
 
+import Swal from "sweetalert2";
+
 const productsRef = db.collection("products");
+const ordersRef = db.collection("orders");
 
 export const CartContext = createContext();
 
@@ -19,10 +21,6 @@ export const ContextProvider = ({ children }) => {
 	const [cartTotal, setCartTotal] = useState(0);
 
 	useEffect(() => {
-		// getData().then((data) => {
-		// 	setProducts(data);
-		// 	setLoading(true);
-		// });
 		productsRef.onSnapshot((snap) => {
 			const dataArray = [];
 			snap.forEach((snapJr) => {
@@ -36,7 +34,41 @@ export const ContextProvider = ({ children }) => {
 			setImageLoaded(true);
 		});
 	}, []);
-	console.log(products);
+
+	const createOrder = (
+		name,
+		phone,
+		email,
+		adress,
+		productsAddedToCart,
+		cartTotal
+	) => {
+		const op = {
+			buyer: { name: name, phone: phone, email: email, adress: adress },
+			items: productsAddedToCart,
+			total: cartTotal,
+			date: new Date().getTime(),
+		};
+		return ordersRef.add(op).then((response) => {
+			console.log(response);
+			Swal.fire({
+				icon: "success",
+				title: `Congratulations ${op.buyer.name}!`,
+				text: `Great purchase! Your items will be delivered to ${op.buyer.adress}.`,
+				footer: `Operation # ${response.id} - Please remember`,
+			});
+		});
+	};
+
+	const updateStock = (productsAddedToCart) => {
+		productsAddedToCart.forEach((product) => {
+			const { id, amountAdded, stock } = product;
+			return productsRef.doc(id).update({
+				stock: stock - amountAdded,
+			});
+			// .then((response) => console.log(response));
+		});
+	};
 
 	const handleCartClick = () => {
 		setOpenCart(!openCart);
@@ -124,7 +156,6 @@ export const ContextProvider = ({ children }) => {
 		}
 	};
 
-	const createOrder = () => {};
 	const values = {
 		cartCounter,
 		openCart,
@@ -144,6 +175,8 @@ export const ContextProvider = ({ children }) => {
 		multiplyPartial,
 		addToCart,
 		removeFromCart,
+		createOrder,
+		updateStock,
 	};
 	return <CartContext.Provider value={values}>{children}</CartContext.Provider>;
 };

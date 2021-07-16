@@ -19,7 +19,11 @@ const ShopGrid = () => {
 				{imageLoaded
 					? products.map((product) => {
 							return (
-								<Product displayProduct='shop__products__inGrid' {...product} />
+								<Product
+									displayProduct='shop__products__inGrid'
+									{...product}
+									key={product.id}
+								/>
 							);
 					  })
 					: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => {

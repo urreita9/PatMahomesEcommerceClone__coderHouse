@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import CartDisplay from "./CartDisplay";
 
 import MenuIcon from "@material-ui/icons/Menu";

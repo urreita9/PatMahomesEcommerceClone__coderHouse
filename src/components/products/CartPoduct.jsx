@@ -62,6 +62,7 @@ const CartPoduct = ({
 							? addToCart(id, stock, title, img, price)
 							: setOutOfStock(true)
 					}
+					style={{ cursor: "pointer" }}
 				>
 					<AddIcon fontSize='small' />
 				</button>
@@ -70,6 +71,7 @@ const CartPoduct = ({
 						removeFromCart(id);
 						setOutOfStock(false);
 					}}
+					style={{ cursor: "pointer" }}
 				>
 					<RemoveIcon fontSize='small' />
 				</button>

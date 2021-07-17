@@ -8,10 +8,7 @@ import "./CartDisplay.css";
 import { CartContext } from "../context/CartContext";
 import CartPoduct from "../products/CartPoduct";
 
-const CartDisplay = ({
-	cartTotal,
-	// setOutOfStock,
-}) => {
+const CartDisplay = ({ cartTotal }) => {
 	const { openCart, productsAddedToCart, handleCartClick } =
 		useContext(CartContext);
 

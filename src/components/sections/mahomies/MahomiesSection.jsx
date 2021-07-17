@@ -7,7 +7,7 @@ const MahomiesSection = () => {
 		<section className='mahomies'>
 			<div className='mahomies__top'>
 				<h2 className='mahomies__title'>
-					15 <span>AND THE </span> <br /> MAHOMIES
+					15 <span>AND THE </span> MAHOMIES
 				</h2>
 				<p>
 					15 and the Mahomies is dedicated to improving the lives of children.

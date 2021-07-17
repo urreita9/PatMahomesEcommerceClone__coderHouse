@@ -1,4 +1,12 @@
 /* Mahomies Title */
+@font-face {
+	src: url(../../../assets/F37JudgeTest-BoldCondensed.otf);
+	font-family: patMahomesBold;
+}
+@font-face {
+	src: url(../../../assets/F37JudgeTest-RegularCondensed.otf);
+	font-family: patMahomesRegular;
+}
 .mahomies {
 	margin-top: 50px;
 	max-width: 95vw;
@@ -8,6 +16,7 @@
 	display: flex;
 }
 .mahomies__top p {
+	font-family: patMahomesRegular;
 	font-size: 3vw;
 	margin-top: 10%;
 }
@@ -23,6 +32,7 @@
 	margin: 0;
 	line-height: 85%;
 	letter-spacing: -0.01em;
+	padding-right: 130px;
 }
 
 .mahomies__title:hover {
@@ -43,9 +53,13 @@
 	.mahomies__top {
 		flex-direction: column;
 	}
+	.mahomies__top p {
+		font-size: 6vw;
+	}
 	.mahomies__title {
 		font-family: patMahomesBold;
 		font-weight: lighter;
 		width: 90vw;
+		padding-right: 0px;
 	}
 }

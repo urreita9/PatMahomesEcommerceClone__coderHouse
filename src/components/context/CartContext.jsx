@@ -20,6 +20,7 @@ export const ContextProvider = ({ children }) => {
 	const [imageLoaded, setImageLoaded] = useState(false);
 	const [loading, setLoading] = useState(false);
 	const [cartTotal, setCartTotal] = useState(0);
+	const [mobile, setMobile] = useState(true);
 
 	useEffect(() => {
 		productsRef.onSnapshot((snap) => {
@@ -184,6 +185,8 @@ export const ContextProvider = ({ children }) => {
 		createOrder,
 		updateStock,
 		createContactEmail,
+		mobile,
+		setMobile,
 	};
 	return <CartContext.Provider value={values}>{children}</CartContext.Provider>;
 };

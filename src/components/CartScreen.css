@@ -45,12 +45,13 @@ button {
 	width: 99.3%;
 }
 .cartSreen__formButton {
-	background-color: yellow;
+	background-color: #fcee21;
 	color: black;
-	font-size: 5vw;
+	font-size: 8vw;
 	cursor: pointer;
 	margin-top: 10px;
 	border: none;
+	padding: 15px 0;
 }
 .cartScreen__products {
 	max-width: 90%;
@@ -60,7 +61,7 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: yellow;
+	color: #fcee21;
 }
 
 @media (max-width: 800px) {

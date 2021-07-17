@@ -32,7 +32,7 @@
 	font-size: 3vw;
 }
 .navBar__left__menuItems__items a:hover {
-	color: yellow;
+	color: #fcee21;
 	cursor: pointer;
 }
 
@@ -91,7 +91,7 @@
 	margin-left: 5px;
 }
 .navMobile__list__item a:hover {
-	color: yellow;
+	color: #fcee21;
 }
 
 .menuIcon {

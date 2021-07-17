@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import NavBarDesktop from "./NavBarDesktop";
 import NavBarMobile from "./NavBarMobile";
 import "./Header.css";
+import { CartContext } from "./context/CartContext";
 
 export const Header = () => {
 	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-	const [mobile, setMobile] = useState(true);
+	const { mobile, setMobile } = useContext(CartContext);
+
 	const menuItems = mobile
 		? ["HOME", "SHOP", "ABOUT", "FAQ"]
 		: ["SHOP", "ABOUT", "FAQ"];

@@ -7,7 +7,13 @@ const ItemListContainer = ({ mobile }) => {
 	const { hideMenuOnClick } = useContext(CartContext);
 
 	return (
-		<div className={mobile ? "navMobile" : "navBar__left"}>
+		<div
+			className={
+				mobile
+					? "navMobile animate__animated animate__fadeInLeft"
+					: "navBar__left"
+			}
+		>
 			{/* <div onClick={handleMenuClick} className='menuIcon'>
 				{clearIcon}
 				<span></span>

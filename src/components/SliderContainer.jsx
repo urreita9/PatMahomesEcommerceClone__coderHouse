@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useContext, useEffect } from "react";
+import { CartContext } from "./context/CartContext";
 import Product from "./Product";
 import ProductSkeleton from "./PoductSkeleton";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,11 +15,19 @@ import SwiperCore, { Pagination, Navigation } from "swiper/core";
 SwiperCore.use([Pagination, Navigation]);
 
 export default function SliderContainer({ products, loading }) {
+	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+	const { mobile, setMobile } = useContext(CartContext);
+
+	useEffect(() => {
+		setScreenWidth(window.innerWidth);
+		screenWidth > 799 ? setMobile(false) : setMobile(true);
+	}, [screenWidth]);
+
 	return (
 		<div className='slider'>
 			<Swiper
-				slidesPerView={3}
-				spaceBetween={30}
+				slidesPerView={mobile ? 1 : 3}
+				spaceBetween={1}
 				slidesPerGroup={1}
 				loop={true}
 				loopFillGroupWithBlank={true}

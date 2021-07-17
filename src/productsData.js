@@ -50,7 +50,7 @@ export const productsFromFile = [
 	},
 	{
 		title: "#15 PROMISE TEE",
-		img: "/images/PM-Repeater-Tee-Front.png",
+		img: "/images/PM-Whatever-It-Takes-Tee-Front.png",
 
 		price: 35,
 		stock: 4,
@@ -59,7 +59,7 @@ export const productsFromFile = [
 	},
 	{
 		title: "2PM SHOWTIME LTD TEE",
-		img: "/images/PM-Repeater-Tee-Front.png",
+		img: "/images/PM-Showtime-Tee-Front.png",
 		price: 35,
 		stock: 3,
 		description:

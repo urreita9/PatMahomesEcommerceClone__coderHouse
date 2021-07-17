@@ -6,6 +6,10 @@
 	src: url(../../assets/F37JudgeTest-MediumCondensed.otf);
 	font-family: patMahomesMedium;
 }
+@font-face {
+	src: url(../../assets/F37JudgeTest-RegularCondensed.otf);
+	font-family: patMahomesRegular;
+}
 .productCard__card__container {
 	margin: 80px auto 30px auto;
 	max-width: 90vw;
@@ -70,7 +74,10 @@
 	border: none;
 	color: black;
 }
-
+.productCard__info__description {
+	font-family: patMahomesRegular;
+	font-size: 2vw;
+}
 .more__products {
 	font-family: patMahomesBold;
 	font-size: 4vw;
@@ -88,6 +95,9 @@
 		/* max-height: 100%; */
 	}
 	.productCard__info__bottomContainer .productCard__info__addToCart {
+		font-size: 6vw;
+	}
+	.productCard__info__description {
 		font-size: 6vw;
 	}
 	.more__products {

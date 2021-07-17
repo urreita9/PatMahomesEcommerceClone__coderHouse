@@ -2,6 +2,10 @@
 	src: url(../../../assets/F37JudgeTest-BoldCondensed.otf);
 	font-family: patMahomesBold;
 }
+@font-face {
+	src: url(../../../assets/F37JudgeTest-RegularCondensed.otf);
+	font-family: patMahomesRegular;
+}
 .footer__container {
 	width: 90vw;
 	margin: 60px auto 0 auto;
@@ -31,7 +35,11 @@
 	margin-top: 20px;
 	font-size: 2.5vw;
 }
+.footer__contact p {
+	font-family: patMahomesRegular;
+}
 .footer__contact p span a {
+	font-family: patMahomesBold;
 	color: #fcee21;
 }
 .footer__contact input {

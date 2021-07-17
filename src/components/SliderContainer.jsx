@@ -22,9 +22,6 @@ export default function SliderContainer({ products, loading }) {
 				slidesPerGroup={1}
 				loop={true}
 				loopFillGroupWithBlank={true}
-				pagination={{
-					clickable: true,
-				}}
 				navigation={true}
 				className='mySwiper'
 			>

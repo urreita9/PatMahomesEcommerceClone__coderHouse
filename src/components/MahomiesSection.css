@@ -4,6 +4,14 @@
 	max-width: 95vw;
 	margin: 0 auto;
 }
+.mahomies__top {
+	display: flex;
+}
+.mahomies__top p {
+	font-size: 3vw;
+	margin-top: 10%;
+}
+
 .mahomies__title {
 	font-family: patMahomesBold;
 	font-weight: lighter;
@@ -29,4 +37,14 @@
 .mahomies__image__container {
 	max-width: 95vw;
 	margin: 0 auto;
+}
+@media (max-width: 799px) {
+	.mahomies__top {
+		flex-direction: column;
+	}
+	.mahomies__title {
+		font-family: patMahomesBold;
+		font-weight: lighter;
+		width: 90vw;
+	}
 }

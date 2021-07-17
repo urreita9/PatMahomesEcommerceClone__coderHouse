@@ -54,7 +54,7 @@ const Footer = () => {
 							}
 						}}
 					>
-						SEND
+						<span>SEND</span>
 					</button>
 				</div>
 			</div>

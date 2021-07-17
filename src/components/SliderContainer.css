@@ -11,6 +11,10 @@
 	width: 90vw;
 	height: 100%;
 }
+.swiper-button-next,
+.swiper-button-prev {
+	color: #f05f2a;
+}
 
 .swiper-slide {
 	text-align: center;

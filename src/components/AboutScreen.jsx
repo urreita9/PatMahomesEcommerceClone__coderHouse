@@ -28,7 +28,7 @@ const AboutScreen = () => {
 						<span className='second__span'>SPANISH - ENGLISH</span>
 					</p>
 					<p>
-						<span className='first__span'>TECS: </span>
+						<span className='first__span'>TECHS: </span>
 						<span className='second__span'>HTML-CSS/SASS-JS-REACT JS</span>
 					</p>
 					<p>

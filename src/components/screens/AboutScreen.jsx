@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+
 import Header from "../sections/header/Header";
 import "./AboutScreen.css";
 
@@ -6,6 +7,7 @@ const AboutScreen = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
+
 	return (
 		<>
 			<div className='about__container'>

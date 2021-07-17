@@ -68,7 +68,6 @@ export const ContextProvider = ({ children }) => {
 			return productsRef.doc(id).update({
 				stock: stock - amountAdded,
 			});
-			// .then((response) => console.log(response));
 		});
 	};
 

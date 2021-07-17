@@ -16,6 +16,7 @@
 .cartScreen__title {
 	text-align: center;
 	font-size: 16.2vw;
+	letter-spacing: -0.01em;
 }
 .cartScreen__container {
 	display: flex;

@@ -46,12 +46,7 @@ const AboutScreen = () => {
 					<p>
 						<span className='first__span'>VANILLA JS PROJECT - SPANISH:</span>
 						<span className='second__span'>
-							<a
-								href='https://urreita9.github.io/giphos/index.html'
-								style={{ color: "yellow" }}
-							>
-								GIPHOS
-							</a>
+							<a href='https://urreita9.github.io/giphos/index.html'>GIPHOS</a>
 						</span>
 					</p>
 					<p>

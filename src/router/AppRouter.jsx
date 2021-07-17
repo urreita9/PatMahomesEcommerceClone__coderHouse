@@ -7,13 +7,13 @@ import {
 	Route,
 	Redirect,
 } from "react-router-dom";
-import AboutScreen from "../components/AboutScreen";
-import CartScreen from "../components/CartScreen";
-import Footer from "../components/Footer";
+import AboutScreen from "../components/screens/AboutScreen";
+import CartScreen from "../components/screens/CartScreen";
+import Footer from "../components/sections/footer/Footer";
 // import Header from "../components/Header";
-import HomeScreen from "../components/HomeScreen";
-import ProductScreen from "../components/ProductScreen";
-import ShopScreen from "../components/ShopScreen";
+import HomeScreen from "../components/screens/HomeScreen";
+import ProductScreen from "../components/screens/ProductScreen";
+import ShopScreen from "../components/screens/ShopScreen";
 
 const AppRouter = () => {
 	return (

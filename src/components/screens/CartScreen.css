@@ -1,0 +1,85 @@
+@font-face {
+	src: url(../../assets/F37JudgeTest-BoldCondensed.otf);
+	font-family: patMahomesBold;
+}
+@font-face {
+	src: url(../../assets/F37JudgeTest-MediumCondensed.otf);
+	font-family: patMahomesMedium;
+}
+@font-face {
+	src: url(../../assets/F37JudgeTest-RegularCondensed.otf);
+	font-family: patMahomesRegular;
+}
+* {
+	font-family: patMahomesBold;
+}
+.cartScreen__title {
+	text-align: center;
+	font-size: 16.2vw;
+}
+.cartScreen__container {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+	width: 90vw;
+	margin: 0 auto;
+}
+.cartScreen__form {
+	width: 100%;
+	max-width: 900px;
+	font-size: 5vw;
+}
+.cartScreen__form label {
+	margin-top: 10px;
+}
+.cartScreen__form input {
+	height: 4.3vw;
+	font-size: 4vw;
+	font-family: patMahomesRegular;
+}
+.cartScreen__form input,
+button {
+	margin-top: 5px;
+
+	width: 99.3%;
+}
+.cartSreen__formButton {
+	background-color: #fcee21;
+	color: black;
+	font-size: 8vw;
+	cursor: pointer;
+	margin-top: 10px;
+	border: none;
+	padding: 15px 0;
+}
+.cartScreen__products {
+	max-width: 90%;
+	font-size: 7vw;
+}
+.total {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fcee21;
+}
+
+@media (max-width: 800px) {
+	.cartScreen__form {
+		width: 100%;
+		max-width: 900px;
+		font-size: 10vw;
+	}
+	.cartScreen__form label {
+		margin-top: 10px;
+	}
+	.cartScreen__form input {
+		height: 10vw;
+		font-size: 9vw;
+		font-family: patMahomesRegular;
+	}
+	.cartScreen__products {
+		max-width: 90vw;
+		font-size: 10vw;
+	}
+}

@@ -1,0 +1,61 @@
+@font-face {
+	src: url(../../assets/F37JudgeTest-BoldCondensed.otf);
+	font-family: patMahomesBold;
+}
+.shop__section__container .shop__image {
+	width: 90vw;
+	margin: 100px auto 20px auto;
+}
+.shop__section__title {
+	font-family: patMahomesBold;
+	font-size: 16.2vw;
+	letter-spacing: -0.01em;
+	line-height: 0.85;
+	margin: 60px auto;
+	text-align: center;
+}
+.shop__section__title__span {
+	font-family: patMahomesBold;
+	-webkit-text-stroke: 1px #fff;
+	color: transparent;
+}
+.shop__grid__container {
+	width: 90vw;
+	margin: 0 auto;
+	grid-column-gap: 2.431vw;
+	grid-row-gap: 1vw;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+}
+.skeleton__grid__container {
+	height: 100vw;
+}
+.shop__products__inGrid:first-child {
+	grid-row-start: 1;
+	grid-column-start: 1;
+	grid-row-end: 3;
+	grid-column-end: 3;
+}
+.shop__products__inGrid:nth-child(2) {
+	grid-row-start: 1;
+	grid-column-start: 3;
+	grid-row-end: 3;
+	grid-column-end: 5;
+}
+
+@media (max-width: 799px) {
+	.shop__grid__container {
+		width: 90vw;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.skeleton__inFlex {
+		height: 100vh;
+		width: 100%;
+	}
+}

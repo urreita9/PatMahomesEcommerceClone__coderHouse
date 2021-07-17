@@ -1,0 +1,96 @@
+@font-face {
+	src: url(../../assets/F37JudgeTest-BoldCondensed.otf);
+	font-family: patMahomesBold;
+}
+@font-face {
+	src: url(../../assets/F37JudgeTest-MediumCondensed.otf);
+	font-family: patMahomesMedium;
+}
+.productCard__card__container {
+	margin: 80px auto 30px auto;
+	max-width: 90vw;
+	justify-content: space-between;
+	display: flex;
+}
+.productCard__image {
+	max-width: 50%;
+	/* margin: 0 auto; */
+	background-color: black;
+	flex-basis: 200%;
+}
+.productCard__image__img {
+	background-color: white;
+	max-width: 90%;
+	max-height: 100%;
+}
+
+.productCard__info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.productCard__info__topContainer {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 20px;
+	border-bottom: 1px solid white;
+	width: 100%;
+}
+.productCard__info__topContainer__title__h1,
+.productCard__info__topContainer__title__span {
+	font-family: patMahomesBold;
+	font-size: 6vw;
+	letter-spacing: -0.01em;
+	line-height: 0.8;
+}
+
+.productCard__info__topContainer__title {
+	max-width: 60%;
+}
+.productCard__info__topContainer__price span {
+	color: #fcee21;
+}
+.productCard__info__topContainer__title__span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.productCard__info__bottomContainer {
+	display: flex;
+	flex-direction: column;
+}
+.productCard__info__bottomContainer .productCard__info__addToCart {
+	font-family: patMahomesMedium;
+	font-size: 3vw;
+	cursor: pointer;
+	width: 100%;
+	padding: 20px 0 20px 0;
+	margin: 20px auto;
+	background-color: #fcee21;
+	border: none;
+	color: black;
+}
+
+.more__products {
+	font-family: patMahomesBold;
+	font-size: 4vw;
+	text-align: center;
+}
+
+@media (max-width: 800px) {
+	.productCard__card__container {
+		flex-direction: column;
+	}
+
+	.productCard__image__img {
+		background-color: white;
+		max-width: 90vw;
+		/* max-height: 100%; */
+	}
+	.productCard__info__bottomContainer .productCard__info__addToCart {
+		font-size: 6vw;
+	}
+	.more__products {
+		font-size: 12vw;
+	}
+}

@@ -1,0 +1,14 @@
+.about__title {
+	font-size: 16.2vw;
+	text-align: center;
+	margin-top: 50px;
+	letter-spacing: -0.01em;
+}
+.about__info__container {
+	width: 90vw;
+	margin: 0 auto;
+	font-size: 7vw;
+}
+.second__span {
+	color: #fcee21;
+}

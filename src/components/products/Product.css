@@ -1,0 +1,81 @@
+@font-face {
+	src: url(../../assets/F37JudgeTest-RegularCondensed.otf);
+	font-family: patMahomesRegular;
+}
+.productInGrid {
+	width: 100%;
+}
+
+.product__image {
+	object-fit: contain;
+	margin: 0 auto;
+	max-width: 100%;
+	background-color: white;
+}
+.product__info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.product__info > p {
+	color: white;
+	font-family: patMahomesRegular;
+	font-size: 2vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.product__info > p > span {
+	color: yellow;
+	font-family: patMahomesRegular;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.skeletonInGrid {
+	width: 100%;
+	height: 100%;
+}
+.skeleton__image {
+	background-color: grey;
+	width: 100%;
+	height: 300%;
+}
+.skeleton__text {
+	background-color: grey;
+}
+/* Grid location of first and last child */
+.productInGrid:first-child {
+	grid-row-start: 1;
+	grid-column-start: 1;
+	grid-row-end: 3;
+	grid-column-end: 3;
+}
+.productInGrid:last-child {
+	margin-top: 1.32vw;
+	grid-row-start: 2;
+	grid-column-start: 3;
+	grid-row-end: 4;
+	grid-column-end: 5;
+}
+
+/* SKELETON */
+
+@media (max-width: 799px) {
+	.product__info > p {
+		font-size: 5vw;
+	}
+	.productInGrid:first-child {
+		grid-row-start: 1;
+		grid-column-start: 1;
+		grid-row-end: 3;
+		grid-column-end: 3;
+	}
+	.productInGrid:last-child {
+		grid-row-start: 5;
+		grid-column-start: 1;
+		grid-row-end: 7;
+		grid-column-end: 3;
+	}
+}

@@ -1,3 +1,11 @@
+Hy! Im Francisco Urrea. This project intends to be a clone of the official Patrick Mahomes Store for CoderHouse Dev School. 
+
+Techs: React - Firebase.
+
+Hosted in firebase: https://patmahomes-store-coderhouse.web.app
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

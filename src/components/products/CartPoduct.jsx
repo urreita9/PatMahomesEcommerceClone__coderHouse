@@ -20,7 +20,13 @@ const CartPoduct = ({
 	const { addToCart, removeFromCart } = useContext(CartContext);
 	return (
 		<div className='cartProducts__container'>
-			<div className='cartProducts__container__ImageTitle'>
+			<div
+				className={
+					checkout
+						? "cartProducts__container__ImageTitle__checkout"
+						: "cartProducts__container__ImageTitle"
+				}
+			>
 				<div className='cartProducts__container__image__container'>
 					<img
 						src={img}

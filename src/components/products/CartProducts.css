@@ -25,7 +25,8 @@
 	max-width: 100%;
 	background-color: black;
 }
-.cartProducts__container__ImageTitle {
+.cartProducts__container__ImageTitle,
+.cartProducts__container__ImageTitle__checkout {
 	display: flex;
 	justify-content: left;
 	align-items: center;
@@ -95,5 +96,8 @@
 		font-size: 5vw;
 		font-family: patMahomesRegular;
 		margin-left: 20px;
+	}
+	.cartProducts__container__ImageTitle__checkout {
+		justify-content: space-around;
 	}
 }

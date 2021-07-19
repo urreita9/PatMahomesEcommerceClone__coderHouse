@@ -22,14 +22,7 @@ const ProductCard = ({ id, title, img, price, stock, description }) => {
 	return (
 		<div className='productCard__card__container'>
 			<div className='productCard__image'>
-				<img
-					src={img}
-					alt={title}
-					className='productCard__image__img'
-					onLoad={() => {
-						console.log("loaded");
-					}}
-				/>
+				<img src={img} alt={title} className='productCard__image__img' />
 			</div>
 			<div className='productCard__info'>
 				<div className='productCard__info__topContainer'>

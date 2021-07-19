@@ -49,7 +49,6 @@ const CartDisplay = ({ cartTotal }) => {
 								key={productAdded.id}
 							/>
 						))}
-						{console.log(productsAddedToCart)}
 					</div>
 				</div>
 				<div className='cart__display__footer__container'>

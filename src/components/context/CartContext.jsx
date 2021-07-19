@@ -52,7 +52,7 @@ export const ContextProvider = ({ children }) => {
 			date: new Date().getTime(),
 		};
 		return ordersRef.add(op).then((response) => {
-			console.log(response);
+			// console.log(response);
 			Swal.fire({
 				icon: "success",
 				title: `Congratulations ${op.buyer.name}!`,

@@ -97,11 +97,11 @@
 	align-items: center;
 }
 
-@media (max-width: 350px) {
+/* @media (max-height: 625px){
 	.cart__display__body {
 		max-height: 150px;
 	}
-}
+} */
 @media (max-width: 799px) {
 	.cart__display__container {
 		left: 0;
@@ -117,5 +117,15 @@
 	}
 	.cart__display__btn a span {
 		font-size: 6vw;
+	}
+}
+@media (max-width: 500px) {
+	.cart__display__header__title {
+		font-size: 20vw;
+	}
+}
+@media (max-width: 500px), (max-height: 624px) {
+	.cart__display__body {
+		max-height: 150px;
 	}
 }

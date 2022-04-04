@@ -1,4 +1,4 @@
-# Patrick Mahomes Store
+# 🏈 Patrick Mahomes Store
 
 ## Introduction
 
@@ -7,9 +7,9 @@ This is a student project done as a first big assigment, in wich join all the te
 
 ## Project Objetives
 
-- Build a React App from scratch
-- Afirm and conect all the learned concepts in the Course 
-- Use firestore as DB
+✅ Build a React App from scratch
+✅ Afirm and conect all the learned concepts in the Course 
+✅ Use firestore as DB
 
 ## Stack of Technologies
 

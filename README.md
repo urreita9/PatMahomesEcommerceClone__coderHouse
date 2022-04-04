@@ -1,78 +1,55 @@
-Hy! Im Francisco Urrea. This project intends to be a clone of the official Patrick Mahomes Store for CoderHouse Dev School. 
+# Patrick Mahomes Store
 
-Techs: React - Firebase.
+## Introduction
 
-Hosted in firebase: https://patmahomes-store-coderhouse.web.app
+This is a student project done as a first big assigment, in wich join all the technologies learned at CoderHouse School: React JS assignment.
 
 
+## Project Objetives
 
-# Getting Started with Create React App
+- Build a React App from scratch
+- Afirm and conect all the learned concepts in the Course 
+- Use firestore as DB
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Stack of Technologies
 
-## Available Scripts
+### Front End:
+React, Context Api, Sass.
 
-In the project directory, you can run:
+### Back End:
+Firestore.
 
-### `npm start`
+# Project Screens 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- - Landing-Page
+![Landing-ecommerce](https://user-images.githubusercontent.com/66705822/99189972-c6b4e200-2742-11eb-89c1-399e42481fd1.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Register, we can do it using the ecommerce platform (by form) or authenticate with github, google or twitter.
+![register](https://user-images.githubusercontent.com/66705822/99189999-e5b37400-2742-11eb-8dbd-dd80f80039e8.png)
 
-### `npm test`
+ - Welcome message when we get registered
+![mail](https://user-images.githubusercontent.com/66705822/99190023-01b71580-2743-11eb-80fc-66901ab019d8.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ - Catalogue with products
+![Catalogue-ecommerce](https://user-images.githubusercontent.com/66705822/99189993-db917580-2742-11eb-83df-dab0391da063.png)
 
-### `npm run build`
+ - Products in detail
+![Products-detail](https://user-images.githubusercontent.com/66705822/99190009-f8c64400-2742-11eb-84f9-682887512d27.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ - Cart
+![cart](https://user-images.githubusercontent.com/66705822/99190035-0d0a4100-2743-11eb-8a89-d1a00ffd13ca.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Checkout. You can pay using paypal or with a debit/credit card
+![Checkout](https://user-images.githubusercontent.com/66705822/99190228-2790ea00-2744-11eb-82d8-8663ba6dfc9b.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Profile
+![profile](https://user-images.githubusercontent.com/66718960/99322129-103e2380-284e-11eb-8d1d-9e1bf4365633.JPG) 
 
-### `npm run eject`
+ - We can add reviews to the products that we had purchase
+![add-review](https://user-images.githubusercontent.com/66705822/99190564-f31e2d80-2745-11eb-80d8-e53ae7cc1ab2.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+ - After add a review we can see it in products-detail
+![reviews-footer](https://user-images.githubusercontent.com/66705822/99190568-f74a4b00-2745-11eb-92db-e8ff50a8e951.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- There is an admin section where we have a CRUD of products, categories, orders and users. -->
+<!-- ![Admin-panel](https://user-images.githubusercontent.com/66705822/99190252-47281280-274 -->

@@ -21,19 +21,20 @@ Firestore.
 
 # Project Screens 
 
-- Landing-Page
+<h3>Landing-Page</h3>  
+
 ![Landing-ecommerce](https://github.com/urreita9/PatMahomesEcommerceClone__coderHouse/blob/master/PatMahomes1.png)
 
-- Mobile
+<h3>Mobile</h3>  
 ![mobile](https://github.com/urreita9/PatMahomesEcommerceClone__coderHouse/blob/master/PatMahomes2.png)
 
- - Mobile Menu
+<h3>Mobile Menu</h3>  
 ![mail](https://github.com/urreita9/PatMahomesEcommerceClone__coderHouse/blob/master/PatMahomes3.png)
 
- - Desktop: products layout
+<h3>Desktop: product layout</h3>  
 ![Catalogue-ecommerce](https://github.com/urreita9/PatMahomesEcommerceClone__coderHouse/blob/master/PatMahomes4.png)
 
- - Cart
+<h3>Cart</h3>  
 ![cart](https://github.com/urreita9/PatMahomesEcommerceClone__coderHouse/blob/master/PatMahomes5.png)
 
 

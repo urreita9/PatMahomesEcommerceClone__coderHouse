@@ -1,4 +1,3 @@
-![CoderHouse Dev School](https://www.greatplacetowork.com.ar/images/coderhouse-logo.png)
 # 🏈 Patrick Mahomes Store
 
 ## Introduction
